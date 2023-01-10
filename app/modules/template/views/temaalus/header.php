@@ -80,103 +80,16 @@
 
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
-            <!-- NOTIF -->
-            <?php
-            $this->db->where('pmk_user_id', $this->session->userdata('user_id'));
-            $this->db->or_where('pmk_user_sek_id', $this->session->userdata('user_id'));
-            $siapa_header = $this->db->get('pdam_m_kepada');
-            if($siapa_header->num_rows() > 0)
-            {
-              /*pmk*/
-              if($siapa_header->row()->pmk_user_id == $this->session->userdata('user_id'))
-              {
-                $this->db->where('ptn_head', 1);
-              }
-
-              if($siapa_header->row()->pmk_user_sek_id == $this->session->userdata('user_id'))
-              {
-                $this->db->where('ptn_sek', 1);
-              }
-              
-              $this->db->where('ptn_penerima_pmk_id', $siapa_header->row()->pmk_id);
-              $this->db->where('ptn_read', '0');
-              $notif_header_blm_baca = $this->db->get('pdam_t_notifikasi');
-
-
-              if($siapa_header->row()->pmk_user_id == $this->session->userdata('user_id'))
-              {
-                $this->db->where('ptn_head', 1);
-              }
-
-              if($siapa_header->row()->pmk_user_sek_id == $this->session->userdata('user_id'))
-              {
-                $this->db->where('ptn_sek', 1);
-              }
-              
-              $this->db->where('ptn_penerima_pmk_id', $siapa_header->row()->pmk_id);
-              $this->db->order_by('ptn_read', 'asc');
-              $this->db->order_by('ptn_date', 'asc');
-              $notif_header = $this->db->get('pdam_t_notifikasi');
-
-            }else{
-              /*user biasa / HTU*/
-              $group = $this->session->userdata('group');
-              $nama_group = $group[0];
-
-              if($nama_group == "HTU")
-              {
-                /*maka htu*/
-                $this->db->where('ptn_penerima_pmk_id', 999);
-                $this->db->where('ptn_read', '0');
-                $notif_header_blm_baca = $this->db->get('pdam_t_notifikasi');
-                
-                $this->db->where('ptn_penerima_pmk_id', 999);
-                $this->db->order_by('ptn_read', 'asc');
-                $this->db->order_by('ptn_date', 'asc');
-                $notif_header = $this->db->get('pdam_t_notifikasi');
-              }else{
-                $this->db->where('ptn_penerima_user_id', $this->session->userdata('user_id'));
-                $this->db->where('ptn_read', '0');
-                $notif_header_blm_baca = $this->db->get('pdam_t_notifikasi');
-
-                $this->db->where('ptn_penerima_user_id', $this->session->userdata('user_id'));
-                $this->db->order_by('ptn_read', 'asc');
-                $this->db->order_by('ptn_date', 'asc');
-                $notif_header = $this->db->get('pdam_t_notifikasi');
-                
-              }
-
-            }
-            ?>
             <li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
               <i class="fa fa-bell"></i>
-              <span class="label label-danger"><?= $notif_header_blm_baca->num_rows();?></span>
+              <span class="label label-danger">0</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header"><i class="fa fa-bullhorn"></i> Anda memiliki <?= $notif_header_blm_baca->num_rows();?> notifikasi baru</li>
+              <li class="header"><i class="fa fa-bullhorn"></i> Anda memiliki 0 notifikasi baru</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
-                  <?php
-                  foreach ($notif_header->result() as $value_notif_header) {?>
-                    <?php if($value_notif_header->ptn_read == '1')
-                    {
-                      echo '<li style="background-color: #f4f4f4;">';
-                    }else{
-                      echo '<li>';
-                    } ?>
-                        <a href="<?php echo $value_notif_header->ptn_link;?>"  onclick="read_flag('<?php echo $value_notif_header->ptn_id;?>')">
-                          <?php 
-                          if($value_notif_header->ptn_read == 1)
-                          { ?>
-                            <i class="fa fa-envelope-open-o text-aqua"></i> <?php echo $value_notif_header->ptn_deskripsi;?>
-                          <?php }else{?>
-                            <i class="fa fa-envelope text-aqua"></i> <?php echo $value_notif_header->ptn_deskripsi;?>
-                          <?php } ?>
-                        </a>
-                      </li>
-                  <?php }?>
                 </ul>
               </li>
               <li class="footer"><a href="#" onclick="read_all_notif()">Mark all as read</a></li>
