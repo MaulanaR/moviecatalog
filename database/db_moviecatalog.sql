@@ -5,13 +5,13 @@
  Source Server Type    : MySQL
  Source Server Version : 100137 (10.1.37-MariaDB)
  Source Host           : localhost:3307
- Source Schema         : alus_stack
+ Source Schema         : db_moviecatalog
 
  Target Server Type    : MySQL
  Target Server Version : 100137 (10.1.37-MariaDB)
  File Encoding         : 65001
 
- Date: 10/01/2023 22:22:48
+ Date: 12/01/2023 00:13:42
 */
 
 SET NAMES utf8mb4;
@@ -26,7 +26,7 @@ CREATE TABLE `alus_g`  (
   `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `description` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of alus_g
@@ -46,7 +46,7 @@ CREATE TABLE `alus_gd`  (
   `table_where` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `table_filter` varchar(1000) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`agd_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 28 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 28 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of alus_gd
@@ -86,7 +86,7 @@ CREATE TABLE `alus_la`  (
   `login` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `time` int UNSIGNED NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of alus_la
@@ -105,17 +105,19 @@ CREATE TABLE `alus_mg`  (
   `menu_icon` varchar(25) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `order_num` int NULL DEFAULT NULL,
   PRIMARY KEY (`menu_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 80 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 84 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of alus_mg
 -- ----------------------------
-INSERT INTO `alus_mg` VALUES (11, 0, 'Menus', 'menus', '', 'fa fa-bars fa-fw', 1);
+INSERT INTO `alus_mg` VALUES (11, 30, 'Menus', 'menus', '', 'fa fa-bars fa-fw', 1);
 INSERT INTO `alus_mg` VALUES (12, 30, 'Group', 'group', '', 'fa fa-book fa-fw', 2);
 INSERT INTO `alus_mg` VALUES (13, 30, 'User', 'users', '', 'fa fa-book fa-fw', 3);
 INSERT INTO `alus_mg` VALUES (30, 0, 'Master', '#', '', 'fa fa-bars fa-fw', 1);
-INSERT INTO `alus_mg` VALUES (78, 0, 'Create Barcode', 'maulana/create', '', 'fa fa-diamond fa-fw', 1);
-INSERT INTO `alus_mg` VALUES (79, 0, 'Scan Barcode', 'maulana/scan', '', 'fa fa-eye fa-fw', 2);
+INSERT INTO `alus_mg` VALUES (80, 0, 'Kategori Film', 'data_kategori_film', '', 'fa fa-bookmark fa-fw', 1);
+INSERT INTO `alus_mg` VALUES (81, 0, 'Film', 'data_film', '', 'fa fa-database fa-fw', 2);
+INSERT INTO `alus_mg` VALUES (82, 0, 'Komentar', 'data_comments', '', 'fa fa-comments fa-fw', 3);
+INSERT INTO `alus_mg` VALUES (83, 0, 'Review', 'data_reviews', '', 'fa fa-star-half-empty fa-', 4);
 
 -- ----------------------------
 -- Table structure for alus_mga
@@ -138,7 +140,7 @@ CREATE TABLE `alus_mga`  (
   INDEX `fk_menu_deleted`(`id_menu` ASC) USING BTREE,
   CONSTRAINT `alus_mga_ibfk_1` FOREIGN KEY (`id_group`) REFERENCES `alus_g` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   CONSTRAINT `alus_mga_ibfk_2` FOREIGN KEY (`id_menu`) REFERENCES `alus_mg` (`menu_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 3857 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 3876 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of alus_mga
@@ -151,12 +153,14 @@ INSERT INTO `alus_mga` VALUES (3685, 9, 11, 0, 0, 0, 0, '1970-01-01 12:00:00', '
 INSERT INTO `alus_mga` VALUES (3686, 9, 30, 1, 0, 0, 0, '1970-01-01 12:00:00', '1970-01-01 12:00:00', '1970-01-01 00:00:00', '1970-01-01 00:00:00');
 INSERT INTO `alus_mga` VALUES (3687, 9, 12, 1, 0, 0, 0, '1970-01-01 12:00:00', '1970-01-01 12:00:00', '1970-01-01 00:00:00', '1970-01-01 00:00:00');
 INSERT INTO `alus_mga` VALUES (3688, 9, 13, 1, 0, 0, 0, '1970-01-01 12:00:00', '1970-01-01 12:00:00', '1970-01-01 00:00:00', '1970-01-01 00:00:00');
-INSERT INTO `alus_mga` VALUES (3843, 1, 11, 1, 1, 1, 1, '2016-09-06 10:55:00', '2016-09-06 10:56:00', '2016-08-08 12:06:00', '2016-08-08 12:06:00');
-INSERT INTO `alus_mga` VALUES (3844, 1, 30, 1, 0, 0, 0, '2016-09-06 10:55:00', '2016-09-06 10:55:00', '2016-08-08 12:06:00', '2016-08-09 13:50:00');
-INSERT INTO `alus_mga` VALUES (3845, 1, 12, 1, 1, 1, 1, '2016-09-06 10:55:00', '2016-09-06 10:55:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00');
-INSERT INTO `alus_mga` VALUES (3846, 1, 13, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00');
-INSERT INTO `alus_mga` VALUES (3855, 1, 78, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00');
-INSERT INTO `alus_mga` VALUES (3856, 1, 79, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00');
+INSERT INTO `alus_mga` VALUES (3868, 1, 30, 1, 0, 0, 0, '2016-09-06 10:55:00', '2016-09-06 10:56:00', '2016-08-08 12:06:00', '2016-08-08 12:06:00');
+INSERT INTO `alus_mga` VALUES (3869, 1, 11, 1, 1, 1, 1, '2016-09-06 10:55:00', '2016-09-06 10:55:00', '2016-08-08 12:06:00', '2016-08-09 13:50:00');
+INSERT INTO `alus_mga` VALUES (3870, 1, 12, 1, 1, 1, 1, '2016-09-06 10:55:00', '2016-09-06 10:55:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00');
+INSERT INTO `alus_mga` VALUES (3871, 1, 13, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00');
+INSERT INTO `alus_mga` VALUES (3872, 1, 80, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00');
+INSERT INTO `alus_mga` VALUES (3873, 1, 81, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00');
+INSERT INTO `alus_mga` VALUES (3874, 1, 82, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00');
+INSERT INTO `alus_mga` VALUES (3875, 1, 83, 1, 1, 1, 1, '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00', '1970-01-01 01:00:00');
 
 -- ----------------------------
 -- Table structure for alus_u
@@ -192,12 +196,12 @@ CREATE TABLE `alus_u`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `sys_users_idx1`(`id` ASC) USING BTREE,
   INDEX `sys_users_idx2`(`id` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 181 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 181 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of alus_u
 -- ----------------------------
-INSERT INTO `alus_u` VALUES (64, 'admins', 'admins', 'MTIzNDU2Nzg5MDEyMzQ1Nvqvv5U+5Kixew57njDPeg==', '::1', '$2y$08$.sbsuXatbF/d4/RvUy77GeeX/Nw48XoXXS/3Xurj7O/ujoQu3KGzK', 'xEfWFClsAdO4BnNm', '', '', NULL, '', 1469523580, 1673363105, 1, 'User', '', '', '11', 0, '1496118042.jpg', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `alus_u` VALUES (64, 'admins', 'admins', 'MTIzNDU2Nzg5MDEyMzQ1Nvqvv5U+5Kixew57njDPeg==', '::1', '$2y$08$.sbsuXatbF/d4/RvUy77GeeX/Nw48XoXXS/3Xurj7O/ujoQu3KGzK', 'xEfWFClsAdO4BnNm', '', '', NULL, '', 1469523580, 1673449210, 1, 'User', '', '', '11', 0, '1496118042.jpg', NULL, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `alus_u` VALUES (65, 'BAGIAN PERLENGKAPAN', 'BAGIAN PERLENGKAPAN', 'MTIzNDU2Nzg5MDEyMzQ1NsGuoJM/yqy8eAN68DTNdlID3W0pjA==', '::1', '$2y$08$JoKZ4fv6BkH5WTWLwW9IfulZAbwPRhawSu5/basXlOukNzemXJuqS', 'Ih49EoG2nF0Zt38O', NULL, NULL, NULL, NULL, 1542868077, 1550670091, 1, 'BAGIAN PERLENGKAPAN', NULL, NULL, '0', 0, 'avatar_default.png', NULL, 1, NULL, NULL, NULL, NULL);
 INSERT INTO `alus_u` VALUES (66, 'DINAS PENDIDIKAN', 'DINAS PENDIDIKAN', 'MTIzNDU2Nzg5MDEyMzQ1Nv2quZ4/3a+0fSdy3TLJexUMnGM=', '::1', '$2y$08$VUKn/N/Oz3h/8IB7somj3ODzqJ3cGYVnLbUw/QESB9MVhCV.zeInG', 'Qoc9aAIiYkGjg9IZ', NULL, NULL, NULL, NULL, 1542868087, 1550991198, 1, 'DINAS PENDIDIKAN', '', NULL, '0', 0, 'avatar_default.png', NULL, 2, NULL, NULL, NULL, NULL);
 INSERT INTO `alus_u` VALUES (67, 'KECAMATAN KAYAN HULU', 'KECAMATAN KAYAN HULU', 'MTIzNDU2Nzg5MDEyMzQ1Nva5/Iwiy6i5IlBV1z7BfldBkGEr', '::1', '$2y$08$amSFXmE4w705SSYY562IM.wr5fvtERPp7sXIFyi04MgZVY2rEhMXS', 'rrptJbn3YVDGJGOF', NULL, NULL, NULL, NULL, 1542868107, 1549440969, 1, 'KECAMATAN KAYAN HULU', NULL, NULL, '0', 0, 'avatar_default.png', NULL, 3, NULL, NULL, NULL, NULL);
@@ -270,12 +274,116 @@ CREATE TABLE `alus_ug`  (
   INDEX `fk_users_groups_groups1_idx`(`group_id` ASC) USING BTREE,
   CONSTRAINT `alus_ug_ibfk_1` FOREIGN KEY (`group_id`) REFERENCES `alus_g` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   CONSTRAINT `alus_ug_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `alus_u` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE = InnoDB AUTO_INCREMENT = 68 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 68 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of alus_ug
 -- ----------------------------
 INSERT INTO `alus_ug` VALUES (1, 64, 1);
+
+-- ----------------------------
+-- Table structure for categories
+-- ----------------------------
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE `categories`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `description` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `picture` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `is_active` tinyint(1) NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by_user_id` int NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of categories
+-- ----------------------------
+INSERT INTO `categories` VALUES (1, 'Action/ Adventure', '', '167345125738.jpg', 1, NULL, '2023-01-11 22:35:14', '2023-01-11 22:34:17', NULL);
+INSERT INTO `categories` VALUES (2, 'Animals', '', '167345671134.jpg', 1, NULL, NULL, '2023-01-12 00:05:11', NULL);
+INSERT INTO `categories` VALUES (3, 'History', '', '167345672505.jpg', 1, NULL, NULL, '2023-01-12 00:05:25', NULL);
+
+-- ----------------------------
+-- Table structure for comments
+-- ----------------------------
+DROP TABLE IF EXISTS `comments`;
+CREATE TABLE `comments`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `comment` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `movie_id` int NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of comments
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for movie_categories
+-- ----------------------------
+DROP TABLE IF EXISTS `movie_categories`;
+CREATE TABLE `movie_categories`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `movie_id` int NOT NULL,
+  `category_id` int NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of movie_categories
+-- ----------------------------
+INSERT INTO `movie_categories` VALUES (1, 5, 1);
+INSERT INTO `movie_categories` VALUES (2, 6, 1);
+INSERT INTO `movie_categories` VALUES (3, 6, 3);
+
+-- ----------------------------
+-- Table structure for movies
+-- ----------------------------
+DROP TABLE IF EXISTS `movies`;
+CREATE TABLE `movies`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `rating` float NULL DEFAULT NULL,
+  `year` int NULL DEFAULT NULL,
+  `duration` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `age` int NULL DEFAULT NULL,
+  `description` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `file_movie` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `picture` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `link_trailer` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by_user_id` int NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of movies
+-- ----------------------------
+INSERT INTO `movies` VALUES (6, 'Astronot Galau', 5, 2022, '1 Jam 5 Menit', 15, 'Film astronot galau', '167345716842.mp4', '167345716842.png', 'https://youtube.com/x', NULL, '2023-01-12 00:12:48', NULL);
+
+-- ----------------------------
+-- Table structure for reviews
+-- ----------------------------
+DROP TABLE IF EXISTS `reviews`;
+CREATE TABLE `reviews`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `review` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `name` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `rating` int NULL DEFAULT NULL,
+  `movie_id` int NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of reviews
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for sys_codes
@@ -291,7 +399,7 @@ CREATE TABLE `sys_codes`  (
   `srn_month` int NULL DEFAULT NULL,
   `srn_reset_by` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT 'NONE',
   PRIMARY KEY (`srn_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of sys_codes

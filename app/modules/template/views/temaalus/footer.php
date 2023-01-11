@@ -2,9 +2,9 @@
 <footer class="main-footer">
     <div class="container-fluid">
       <div class="pull-right hidden-xs">
-        <b>E-Musrenbangnas </b>
+        <b>Panel Admin</b>
       </div>
-      <strong>Copyright &copy; 2019 .</strong> All rights
+      <strong>Copyright &copy; <?php echo date('Y',now());?> .</strong> All rights
       reserved.
     </div>
     <!-- /.container -->
