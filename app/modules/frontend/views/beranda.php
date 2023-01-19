@@ -26,7 +26,7 @@
 </head>
 
 <body>
-	<!-- header (hidden style) -->
+	<!-- Navbar -->
 	<header class="header header--hidden">
 		<div class="container">
 			<div class="row">
@@ -39,7 +39,7 @@
 						</button>
 
 						<a href="<?= site_url('frontend/beranda')?>" class="header__logo">
-							<img src="<?= base_url('assets/img/logo.png')?>" alt="" >
+							<img src="<?= base_url('assets/img/logo.png')?>" alt="">
 						</a>
 
 						<ul class="header__nav">
@@ -88,10 +88,6 @@
 										</ul>
 									</li>
 									<li><a href="category.html">Category style 1</a></li>
-									<li><a href="category2.html">Category style 2</a></li>
-									<li><a href="details.html">Details style 1</a></li>
-									<li><a href="details2.html">Details style 2</a></li>
-									<li><a href="details3.html">Details style 3</a></li>
 								</ul>
 							<li class="header__nav-item">
 								<a class="header__nav-link header__nav-link--live" href="live.html">LIVE<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6" cy="4" r="4" fill="#EB5757" fill-opacity="0.5"/><g filter="url(#filter0_d)"><circle cx="6" cy="4" r="2" fill="#EB5757"/></g><defs><filter id="filter0_d" x="0" y="0" width="12" height="12" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="2"/><feGaussianBlur stdDeviation="2"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/></filter></defs></svg></a>
