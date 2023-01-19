@@ -18,13 +18,16 @@ class Beranda extends CI_Controller
     public function index()
     {
             $title_head = "Beranda";
-            $head['title'] = $title_head;
-
+            $data_gambar['title'] = $title_head;
+			$data_gambar['movies'] = $this->db->get('movies');
 
             /*DATA*/
+			// disini dikasih datanya
+			
             /*END DATA*/
 
-
+			//kalo nama varnya data_gambar, diatas harusnya data_gambar juga, bukan $head
+			//lanjutkan
             $this->load->view('beranda', $data_gambar);      
     }
 	public function show_images(){

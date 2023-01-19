@@ -72,11 +72,7 @@ $config['computer_allow'] = array('DESKTOP-7FU5EK2','MR_Gonjou.bappenas.go.id','
  */
 
 
-if(in_array(gethostbyaddr($_SERVER['REMOTE_ADDR']),$config['computer_allow'])){
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
-}else{
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'production');
-}
+define('ENVIRONMENT', 'development');
 
 /*
  *---------------------------------------------------------------

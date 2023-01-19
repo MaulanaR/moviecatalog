@@ -217,7 +217,8 @@ body::-webkit-scrollbar-thumb {
 }
 .header__logo img {
   
-  height: auto;
+  width: 300px;
+	height: auto;
 }
 .header__nav {
   display: flex;
