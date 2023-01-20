@@ -12,7 +12,6 @@ class Beranda extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Beranda_model');
-		$this->load->helper('url');
     }
 
     public function index()
@@ -29,6 +28,12 @@ class Beranda extends CI_Controller
 			//kalo nama varnya data_gambar, diatas harusnya data_gambar juga, bukan $head
 			//lanjutkan
             $this->load->view('beranda', $data_gambar);      
+    }
+    public function details()
+    {
+        $data['movies'] = $this->db->get('movies');;
+        // load view
+        $this->load->view('details',$data);   
     }
 	public function show_images(){
 		$data['movies']= $this->Beranda_model->get_data_gambar();

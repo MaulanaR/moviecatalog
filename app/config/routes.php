@@ -53,3 +53,5 @@ $route['default_controller'] = 'frontend/Beranda';
 $route['recovery_password'] = 'forgot_password/recov/';
 $route['404_override'] = 'dashboard/error404/';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['details'] = 'frontend/details';
