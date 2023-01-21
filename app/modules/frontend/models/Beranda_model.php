@@ -74,7 +74,7 @@ class Beranda_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
- 
+    
     function count_filtered()
     {
         $this->_get_datatables_query();
@@ -90,26 +90,25 @@ class Beranda_model extends CI_Model {
 
     /* end server side  */
 
-    function getid($id)
+    public function getdetails($id)
     {
-        $this->db->where($this->idtable, $id);
-        return $this->db->get($this->table)->result();
+        $this->db->select('*');
+        $this->db->from('movies');
+        $this->db->where('id',$id);
+        $query = $this->db->get();
+        if($query->num_rows()>0)
+            return $query->result();
     }
 
-    function save($data)
+    public function getcomment($id)
     {
-        return $this->db->insert($this->table, $data);
+        $this->db->select('*');
+        $this->db->from('comments');
+        $this->db->where('id',$id);
+        $query = $this->db->get();
+        if($query->num_rows()>0)
+            return $query->result();
     }
 
-    function edit($data)
-    {
-        $this->db->where($this->idtable, $this->input->post($this->idtable));
-        return $this->db->update($this->table, $data);
-    }
 
-    function delete($id)
-    {
-        $this->db->where($this->idtable, $id);
-        return $this->db->delete($this->table);
-    }
 }

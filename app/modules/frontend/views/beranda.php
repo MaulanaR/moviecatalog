@@ -127,7 +127,7 @@
 			?>
 		
 		<div class="home__card">
-					<a href="<?= site_url()?>frontend/beranda/details?id=<?php echo $row['id']?>">
+					<a href="<?php echo base_url();?>/frontend/beranda/details/<?php echo $row->id;?>">
 						<img src="<?php echo base_url().'assets/movies/'.$row->picture;?>" alt="thumbnail">
 					</a>
 					<div>
