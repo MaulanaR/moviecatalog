@@ -138,8 +138,8 @@ $(document).ready(function () {
 		touchDrag: true,
 		dots: true,
 		loop: true,
-		autoplay: false,
-		smartSpeed: 600,
+		autoplay: true,
+		smartSpeed: 100,
 		margin: 20,
 		autoHeight: true,
 		responsive: {
@@ -163,7 +163,7 @@ $(document).ready(function () {
 				dots: false,
 				mouseDrag: false,
 				slideBy: 6,
-				smartSpeed: 400,
+				smartSpeed: 200,
 			},
 		}
 	});

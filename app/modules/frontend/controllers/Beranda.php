@@ -18,6 +18,14 @@ class Beranda extends CI_Controller
     {
             $title_head = "Beranda";
             $data_gambar['title'] = $title_head;
+            //new movies
+            $this->db->where('year', date('Y',now()));
+			$data_gambar['new_movies'] = $this->db->get('movies');
+            //popular movies
+            $this->db->order_by('rating', 'desc');
+			$data_gambar['popular_movies'] = $this->db->get('movies');
+
+            //all movies
 			$data_gambar['movies'] = $this->db->get('movies');
 
             /*DATA*/
@@ -28,12 +36,14 @@ class Beranda extends CI_Controller
 			//kalo nama varnya data_gambar, diatas harusnya data_gambar juga, bukan $head
 			//lanjutkan
             $this->load->view('beranda', $data_gambar);      
+            $this->load->view('footer');
     }
     public function details($id)
     {
         $data['title'] = "Details Movies";
         $data['movies'] = $this->Beranda_model->getdetails($id);
         $this->load->view('details', $data);   
+        $this->load->view('footer');
     }
     public function comment($id)
     {
