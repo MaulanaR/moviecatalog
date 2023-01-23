@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 21, 2023 at 01:14 PM
+-- Generation Time: Jan 23, 2023 at 02:24 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -211,7 +211,7 @@ CREATE TABLE `alus_u` (
 --
 
 INSERT INTO `alus_u` (`id`, `username`, `job_title`, `abc`, `ip_address`, `ghi`, `def`, `mno`, `jkl`, `stu`, `pqr`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`, `ht`, `picture`, `mdo_id`, `mos_id`, `grup_type`, `bpd_id`, `bpd_id_2`, `staff_pmk_id`) VALUES
-(64, 'admins', 'admins', 'MTIzNDU2Nzg5MDEyMzQ1Nvqvv5U+5Kixew57njDPeg==', '::1', '$2y$08$.sbsuXatbF/d4/RvUy77GeeX/Nw48XoXXS/3Xurj7O/ujoQu3KGzK', 'xEfWFClsAdO4BnNm', '', '', NULL, '', 1469523580, 1674275663, 1, 'User', '', '', '11', 0, '1496118042.jpg', NULL, NULL, NULL, NULL, NULL, NULL),
+(64, 'admins', 'admins', 'MTIzNDU2Nzg5MDEyMzQ1Nvqvv5U+5Kixew57njDPeg==', '::1', '$2y$08$.sbsuXatbF/d4/RvUy77GeeX/Nw48XoXXS/3Xurj7O/ujoQu3KGzK', 'xEfWFClsAdO4BnNm', '', '', NULL, '', 1469523580, 1674463316, 1, 'User', '', '', '11', 0, '1496118042.jpg', NULL, NULL, NULL, NULL, NULL, NULL),
 (65, 'BAGIAN PERLENGKAPAN', 'BAGIAN PERLENGKAPAN', 'MTIzNDU2Nzg5MDEyMzQ1NsGuoJM/yqy8eAN68DTNdlID3W0pjA==', '::1', '$2y$08$JoKZ4fv6BkH5WTWLwW9IfulZAbwPRhawSu5/basXlOukNzemXJuqS', 'Ih49EoG2nF0Zt38O', NULL, NULL, NULL, NULL, 1542868077, 1550670091, 1, 'BAGIAN PERLENGKAPAN', NULL, NULL, '0', 0, 'avatar_default.png', NULL, 1, NULL, NULL, NULL, NULL),
 (66, 'DINAS PENDIDIKAN', 'DINAS PENDIDIKAN', 'MTIzNDU2Nzg5MDEyMzQ1Nv2quZ4/3a+0fSdy3TLJexUMnGM=', '::1', '$2y$08$VUKn/N/Oz3h/8IB7somj3ODzqJ3cGYVnLbUw/QESB9MVhCV.zeInG', 'Qoc9aAIiYkGjg9IZ', NULL, NULL, NULL, NULL, 1542868087, 1550991198, 1, 'DINAS PENDIDIKAN', '', NULL, '0', 0, 'avatar_default.png', NULL, 2, NULL, NULL, NULL, NULL),
 (67, 'KECAMATAN KAYAN HULU', 'KECAMATAN KAYAN HULU', 'MTIzNDU2Nzg5MDEyMzQ1Nva5/Iwiy6i5IlBV1z7BfldBkGEr', '::1', '$2y$08$amSFXmE4w705SSYY562IM.wr5fvtERPp7sXIFyi04MgZVY2rEhMXS', 'rrptJbn3YVDGJGOF', NULL, NULL, NULL, NULL, 1542868107, 1549440969, 1, 'KECAMATAN KAYAN HULU', NULL, NULL, '0', 0, 'avatar_default.png', NULL, 3, NULL, NULL, NULL, NULL),
@@ -357,18 +357,20 @@ CREATE TABLE `movies` (
   `link_trailer` text DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
   `created_at` timestamp NULL DEFAULT current_timestamp(),
-  `created_by_user_id` int(11) DEFAULT NULL
+  `created_by_user_id` int(11) DEFAULT NULL,
+  `is_featured` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `movies`
 --
 
-INSERT INTO `movies` (`id`, `title`, `rating`, `year`, `duration`, `age`, `description`, `file_movie`, `picture`, `link_trailer`, `updated_at`, `created_at`, `created_by_user_id`) VALUES
-(6, 'The Last of Us (2023)', 9.6, 2023, '1 Jam 5 Menit', 18, 'Twenty years after modern civilization has been destroyed. Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the U.S. and depend on each other for survival.', 'movie_167428166635.mp4', '167429365324.webp', 'https://youtu.be/N5XCOwFI9w8', '2023-01-21 09:34:13', '2023-01-11 17:12:48', NULL),
-(7, 'Coding tai', 4.5, 2023, '2jam 30menit', 18, '', NULL, '167419875670.jpeg', '', NULL, '2023-01-20 07:12:37', NULL),
-(8, 'aku gila', 4.5, 2023, '', 0, '', NULL, '167420022882.jpeg', '', NULL, '2023-01-20 07:37:09', NULL),
-(9, 'pepepe', 4.5, 2023, '', 0, '', NULL, '167420027676.jpeg', '', NULL, '2023-01-20 07:37:57', NULL);
+INSERT INTO `movies` (`id`, `title`, `rating`, `year`, `duration`, `age`, `description`, `file_movie`, `picture`, `link_trailer`, `updated_at`, `created_at`, `created_by_user_id`, `is_featured`) VALUES
+(6, 'The Last of Us (2023)', 9.6, 2023, '1 Jam 5 Menit', 18, 'Twenty years after modern civilization has been destroyed. Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the U.S. and depend on each other for survival.', 'movie_167428166635.mp4', '167429365324.webp', 'https://youtu.be/N5XCOwFI9w8', '2023-01-21 09:34:13', '2023-01-11 17:12:48', NULL, 0),
+(7, 'Coding tai', 4.5, 2023, '2jam 30menit', 18, '', NULL, '167419875670.jpeg', '', NULL, '2023-01-20 07:12:37', NULL, 0),
+(8, 'aku gila', 4.5, 2023, '', 0, '', NULL, '167420022882.jpeg', '', NULL, '2023-01-20 07:37:09', NULL, 0),
+(9, 'pepepe', 4.5, 2023, '', 0, '', NULL, '167420027676.jpeg', '', NULL, '2023-01-20 07:37:57', NULL, 0),
+(11, 'The Price We Pay (2023)', 5.3, 2023, '1Jam 25Menit', 18, 'After a pawn shop robbery goes askew, two criminals take refuge at a remote farmhouse to try to let the heat die down, but find something much more menacing.', '167446640621.mp4', '167446640621.jpg', '', NULL, '2023-01-23 09:33:27', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -392,7 +394,9 @@ INSERT INTO `movie_categories` (`id`, `movie_id`, `category_id`) VALUES
 (5, 8, 2),
 (6, 9, 3),
 (27, 6, 1),
-(28, 6, 3);
+(28, 6, 3),
+(29, 10, 1),
+(30, 11, 1);
 
 -- --------------------------------------------------------
 
@@ -409,6 +413,13 @@ CREATE TABLE `reviews` (
   `rating` int(11) DEFAULT NULL,
   `movie_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `title`, `review`, `name`, `created_at`, `rating`, `movie_id`) VALUES
+(2, 'Pengen Nonton lagi', 'kangen aja gitu', 'Youngsta', '2023-01-22 04:53:53', 10, 6);
 
 -- --------------------------------------------------------
 
@@ -553,7 +564,7 @@ ALTER TABLE `alus_gd`
 -- AUTO_INCREMENT for table `alus_la`
 --
 ALTER TABLE `alus_la`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `alus_mg`
@@ -595,19 +606,19 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `movie_categories`
 --
 ALTER TABLE `movie_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `sys_codes`

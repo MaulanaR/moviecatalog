@@ -23,10 +23,16 @@ class Beranda extends CI_Controller
 			$data_gambar['new_movies'] = $this->db->get('movies');
             //popular movies
             $this->db->order_by('rating', 'desc');
-			$data_gambar['popular_movies'] = $this->db->get('movies');
-
+			$data_gambar['popular_movies'] = $this->db->get('movies');    
             //all movies
 			$data_gambar['movies'] = $this->db->get('movies');
+            // Action Movies
+            $this->db->where('category_id',1);
+            $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+            $data_gambar['action_movies']= $this->db->get('movies');
+            //New Episode
+
+            //New Season
 
             /*DATA*/
 			// disini dikasih datanya
@@ -51,7 +57,6 @@ class Beranda extends CI_Controller
         $data['comments'] = $this->Beranda_model->getcomment($id);
         $this->load->view('details', $data);   
     }
-
 
 }
 
