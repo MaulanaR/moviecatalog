@@ -3,7 +3,7 @@
 			<div class="row">
 				<div class="col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 order-4 order-md-1 order-lg-4 order-xl-1">
 					<div class="footer__flixtv">
-						<img src="img/logo.svg" alt="">
+						<img src="<?= base_url('assets/img/logo.png')?>" style="width: 250px;" alt="">
 					</div>
 					<p class="footer__tagline">Movies & TV Shows, Online cinema.</p>
 					<div class="footer__social">
@@ -69,7 +69,7 @@
 							<a href="privacy.html">Privacy policy</a>
 							<a href="privacy.html">Terms and conditions</a>
 						</div>
-						<small class="footer__copyright">© PusatLensaFilm, 2023. Created by <a href="https://themeforest.net/user/dmitryvolkov/portfolio" target="_blank">Luqman Aly Razak</a>.</small>
+						<small class="footer__copyright">© PusatLensaFilm, 2023. Created by <a href="https://appx.alus.co/luqman_web" target="_blank">Luqman Aly Razak</a>.</small>
 					</div>
 				</div>
 			</div>

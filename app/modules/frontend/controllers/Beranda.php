@@ -32,8 +32,10 @@ class Beranda extends CI_Controller
             $data_gambar['action_movies']= $this->db->get('movies');
             //New Episode
 
-            //New Season
-
+            //Newest Season
+            $this->db->where('is_featured',2);
+            $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+            $data_gambar['news_season']= $this->db->get('movies');
             /*DATA*/
 			// disini dikasih datanya
 			

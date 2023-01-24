@@ -270,8 +270,8 @@ class Data_film extends CI_Controller
             $config['create_thumb'] = FALSE;
             $config['maintain_ratio'] = FALSE;
             $config['quality'] = '100%';
-            $config['width'] = 450;
-            $config['height'] = 304;
+            $config['width'] = 400;
+            $config['height'] = 600;
             $config['new_image'] = './assets/movies/' . $gbr['file_name'];
             $this->load->library('image_lib', $config);
             $this->image_lib->resize();

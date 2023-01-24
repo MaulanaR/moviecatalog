@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2023 at 02:24 PM
+-- Generation Time: Jan 24, 2023 at 12:41 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -211,7 +211,7 @@ CREATE TABLE `alus_u` (
 --
 
 INSERT INTO `alus_u` (`id`, `username`, `job_title`, `abc`, `ip_address`, `ghi`, `def`, `mno`, `jkl`, `stu`, `pqr`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`, `ht`, `picture`, `mdo_id`, `mos_id`, `grup_type`, `bpd_id`, `bpd_id_2`, `staff_pmk_id`) VALUES
-(64, 'admins', 'admins', 'MTIzNDU2Nzg5MDEyMzQ1Nvqvv5U+5Kixew57njDPeg==', '::1', '$2y$08$.sbsuXatbF/d4/RvUy77GeeX/Nw48XoXXS/3Xurj7O/ujoQu3KGzK', 'xEfWFClsAdO4BnNm', '', '', NULL, '', 1469523580, 1674463316, 1, 'User', '', '', '11', 0, '1496118042.jpg', NULL, NULL, NULL, NULL, NULL, NULL),
+(64, 'admins', 'admins', 'MTIzNDU2Nzg5MDEyMzQ1Nvqvv5U+5Kixew57njDPeg==', '::1', '$2y$08$.sbsuXatbF/d4/RvUy77GeeX/Nw48XoXXS/3Xurj7O/ujoQu3KGzK', 'xEfWFClsAdO4BnNm', '', '', NULL, '', 1469523580, 1674558665, 1, 'User', '', '', '11', 0, '1496118042.jpg', NULL, NULL, NULL, NULL, NULL, NULL),
 (65, 'BAGIAN PERLENGKAPAN', 'BAGIAN PERLENGKAPAN', 'MTIzNDU2Nzg5MDEyMzQ1NsGuoJM/yqy8eAN68DTNdlID3W0pjA==', '::1', '$2y$08$JoKZ4fv6BkH5WTWLwW9IfulZAbwPRhawSu5/basXlOukNzemXJuqS', 'Ih49EoG2nF0Zt38O', NULL, NULL, NULL, NULL, 1542868077, 1550670091, 1, 'BAGIAN PERLENGKAPAN', NULL, NULL, '0', 0, 'avatar_default.png', NULL, 1, NULL, NULL, NULL, NULL),
 (66, 'DINAS PENDIDIKAN', 'DINAS PENDIDIKAN', 'MTIzNDU2Nzg5MDEyMzQ1Nv2quZ4/3a+0fSdy3TLJexUMnGM=', '::1', '$2y$08$VUKn/N/Oz3h/8IB7somj3ODzqJ3cGYVnLbUw/QESB9MVhCV.zeInG', 'Qoc9aAIiYkGjg9IZ', NULL, NULL, NULL, NULL, 1542868087, 1550991198, 1, 'DINAS PENDIDIKAN', '', NULL, '0', 0, 'avatar_default.png', NULL, 2, NULL, NULL, NULL, NULL),
 (67, 'KECAMATAN KAYAN HULU', 'KECAMATAN KAYAN HULU', 'MTIzNDU2Nzg5MDEyMzQ1Nva5/Iwiy6i5IlBV1z7BfldBkGEr', '::1', '$2y$08$amSFXmE4w705SSYY562IM.wr5fvtERPp7sXIFyi04MgZVY2rEhMXS', 'rrptJbn3YVDGJGOF', NULL, NULL, NULL, NULL, 1542868107, 1549440969, 1, 'KECAMATAN KAYAN HULU', NULL, NULL, '0', 0, 'avatar_default.png', NULL, 3, NULL, NULL, NULL, NULL),
@@ -312,9 +312,30 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `description`, `picture`, `is_active`, `deleted_at`, `updated_at`, `created_at`, `created_by_user_id`) VALUES
-(1, 'Action/ Adventure', '', '167345125738.jpg', 1, NULL, '2023-01-11 15:35:14', '2023-01-11 15:34:17', NULL),
+(1, 'Action', '', '167345125738.jpg', 1, NULL, '2023-01-24 06:32:10', '2023-01-11 15:34:17', NULL),
 (2, 'Animals', '', '167345671134.jpg', 1, NULL, NULL, '2023-01-11 17:05:11', NULL),
-(3, 'History', '', '167345672505.jpg', 1, NULL, NULL, '2023-01-11 17:05:25', NULL);
+(3, 'History', '', '167345672505.jpg', 1, NULL, NULL, '2023-01-11 17:05:25', NULL),
+(4, 'Adventure', '', NULL, 1, NULL, NULL, '2023-01-24 06:34:41', NULL),
+(5, 'Biography', '', NULL, 1, NULL, NULL, '2023-01-24 06:35:30', NULL),
+(6, 'Comedy', '', NULL, 1, NULL, NULL, '2023-01-24 06:35:46', NULL),
+(7, 'Crime', '', NULL, 1, NULL, NULL, '2023-01-24 06:36:03', NULL),
+(8, 'Documentary', '', NULL, 1, NULL, NULL, '2023-01-24 06:36:29', NULL),
+(9, 'Dance', '', NULL, 1, NULL, NULL, '2023-01-24 06:37:43', NULL),
+(10, 'Education', '', NULL, 1, NULL, NULL, '2023-01-24 06:38:08', NULL),
+(11, 'Fantasy', '', NULL, 1, NULL, NULL, '2023-01-24 06:38:50', NULL),
+(12, 'History', '', NULL, 1, NULL, NULL, '2023-01-24 06:39:17', NULL),
+(13, 'Horror', '', NULL, 1, NULL, NULL, '2023-01-24 06:39:28', NULL),
+(14, 'Kids & Family', '', NULL, 1, NULL, NULL, '2023-01-24 06:39:52', NULL),
+(15, 'Millitary/War', '', NULL, 1, NULL, NULL, '2023-01-24 06:40:09', NULL),
+(16, 'Music', '', NULL, 1, NULL, NULL, '2023-01-24 06:40:20', NULL),
+(17, 'Nature', '', NULL, 1, NULL, NULL, '2023-01-24 06:40:29', NULL),
+(18, 'Paranormal', '', NULL, 1, NULL, NULL, '2023-01-24 06:40:42', NULL),
+(19, 'Politics', '', NULL, 1, NULL, NULL, '2023-01-24 06:41:03', NULL),
+(20, 'Racing', '', NULL, 1, NULL, NULL, '2023-01-24 06:41:27', NULL),
+(21, 'Romance', '', NULL, 1, NULL, NULL, '2023-01-24 06:41:34', NULL),
+(22, 'Science', '', NULL, 1, NULL, NULL, '2023-01-24 06:41:46', NULL),
+(23, 'Travel', '', NULL, 1, NULL, NULL, '2023-01-24 06:41:57', NULL),
+(24, 'Western', '', NULL, 1, NULL, NULL, '2023-01-24 06:42:06', NULL);
 
 -- --------------------------------------------------------
 
@@ -366,11 +387,11 @@ CREATE TABLE `movies` (
 --
 
 INSERT INTO `movies` (`id`, `title`, `rating`, `year`, `duration`, `age`, `description`, `file_movie`, `picture`, `link_trailer`, `updated_at`, `created_at`, `created_by_user_id`, `is_featured`) VALUES
-(6, 'The Last of Us (2023)', 9.6, 2023, '1 Jam 5 Menit', 18, 'Twenty years after modern civilization has been destroyed. Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the U.S. and depend on each other for survival.', 'movie_167428166635.mp4', '167429365324.webp', 'https://youtu.be/N5XCOwFI9w8', '2023-01-21 09:34:13', '2023-01-11 17:12:48', NULL, 0),
-(7, 'Coding tai', 4.5, 2023, '2jam 30menit', 18, '', NULL, '167419875670.jpeg', '', NULL, '2023-01-20 07:12:37', NULL, 0),
-(8, 'aku gila', 4.5, 2023, '', 0, '', NULL, '167420022882.jpeg', '', NULL, '2023-01-20 07:37:09', NULL, 0),
-(9, 'pepepe', 4.5, 2023, '', 0, '', NULL, '167420027676.jpeg', '', NULL, '2023-01-20 07:37:57', NULL, 0),
-(11, 'The Price We Pay (2023)', 5.3, 2023, '1Jam 25Menit', 18, 'After a pawn shop robbery goes askew, two criminals take refuge at a remote farmhouse to try to let the heat die down, but find something much more menacing.', '167446640621.mp4', '167446640621.jpg', '', NULL, '2023-01-23 09:33:27', NULL, 0);
+(6, 'The Last of Us (2023)', 9.6, 2023, '1 Jam 5 Menit', 18, 'Twenty years after modern civilization has been destroyed. Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the U.S. and depend on each other for survival.', 'movie_167428166635.mp4', '167454841463.jpeg', 'https://youtu.be/N5XCOwFI9w8', '2023-01-24 08:20:15', '2023-01-11 17:12:48', NULL, 1),
+(7, 'There’s Something Wrong with the Children (2023)', 6.3, 2023, '2jam 30menit', 18, 'Margaret and Ben take a weekend trip with longtime friends Ellie and Thomas and their two young children. Eventually, Ben begins to suspect something supernatural is occurring when the kids behave strangely after disappearing into the woods overnight.', '167454331788.mp4', '167454830588.jpg', '', '2023-01-24 08:18:26', '2023-01-20 07:12:37', NULL, 2),
+(8, 'Detective Knight: Redemption (2022)', 4.8, 2022, '1 Jam 33 Menit', 18, 'In custody in New York, Detective James Knight finds himself in the middle of a jailbreak led by The Christmas Bomber, a brutal fanatic whose Santa Claus disciples are terrorizing the city. With the promised return of his badge in exchange for taking out the terrorists, the steely-eyed Knight doles out mercy for the just…and merciless justice for all the rest.', '167454724629.mp4', '167454859023.jpg', '', '2023-01-24 08:23:11', '2023-01-20 07:37:09', NULL, 0),
+(9, 'Money Heist: Korea – Joint Economic Area (2022)', 9.1, 2022, '', 0, 'Synopsis\r\n??? ?: ?????? – Disguised under the shadows of a mask, a crew of desperados band together under the leadership of a criminal mastermind known only as “The Professor” to pull off the biggest heist Korea has ever seen.', NULL, '167454997346.jpg', '', '2023-01-24 08:46:13', '2023-01-20 07:37:57', NULL, 2),
+(11, 'The Price We Pay (2023)', 5.3, 2023, '1Jam 25Menit', 18, 'After a pawn shop robbery goes askew, two criminals take refuge at a remote farmhouse to try to let the heat die down, but find something much more menacing.', '167446640621.mp4', '167454877764.jpg', '', '2023-01-24 08:26:18', '2023-01-23 09:33:27', NULL, 2);
 
 -- --------------------------------------------------------
 
@@ -390,13 +411,13 @@ CREATE TABLE `movie_categories` (
 
 INSERT INTO `movie_categories` (`id`, `movie_id`, `category_id`) VALUES
 (1, 5, 1),
-(4, 7, 3),
-(5, 8, 2),
-(6, 9, 3),
-(27, 6, 1),
-(28, 6, 3),
 (29, 10, 1),
-(30, 11, 1);
+(34, 7, 13),
+(35, 6, 1),
+(36, 6, 3),
+(37, 8, 1),
+(38, 11, 1),
+(39, 9, 1);
 
 -- --------------------------------------------------------
 
@@ -564,7 +585,7 @@ ALTER TABLE `alus_gd`
 -- AUTO_INCREMENT for table `alus_la`
 --
 ALTER TABLE `alus_la`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `alus_mg`
@@ -594,7 +615,7 @@ ALTER TABLE `alus_ug`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `comments`
@@ -612,7 +633,7 @@ ALTER TABLE `movies`
 -- AUTO_INCREMENT for table `movie_categories`
 --
 ALTER TABLE `movie_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `reviews`
