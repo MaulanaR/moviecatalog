@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2023 at 12:41 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Waktu pembuatan: 25 Jan 2023 pada 13.48
+-- Versi server: 10.4.27-MariaDB
+-- Versi PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,17 +24,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `alus_g`
+-- Struktur dari tabel `alus_g`
 --
 
 CREATE TABLE `alus_g` (
   `id` mediumint(8) UNSIGNED NOT NULL,
   `name` varchar(50) NOT NULL,
   `description` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `alus_g`
+-- Dumping data untuk tabel `alus_g`
 --
 
 INSERT INTO `alus_g` (`id`, `name`, `description`) VALUES
@@ -43,7 +43,7 @@ INSERT INTO `alus_g` (`id`, `name`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `alus_gd`
+-- Struktur dari tabel `alus_gd`
 --
 
 CREATE TABLE `alus_gd` (
@@ -54,10 +54,10 @@ CREATE TABLE `alus_gd` (
   `table_is_filter` int(11) DEFAULT NULL,
   `table_where` varchar(50) DEFAULT NULL,
   `table_filter` varchar(1000) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `alus_gd`
+-- Dumping data untuk tabel `alus_gd`
 --
 
 INSERT INTO `alus_gd` (`agd_id`, `ag_id`, `enabled`, `table_name`, `table_is_filter`, `table_where`, `table_filter`) VALUES
@@ -89,7 +89,7 @@ INSERT INTO `alus_gd` (`agd_id`, `ag_id`, `enabled`, `table_name`, `table_is_fil
 -- --------------------------------------------------------
 
 --
--- Table structure for table `alus_la`
+-- Struktur dari tabel `alus_la`
 --
 
 CREATE TABLE `alus_la` (
@@ -97,12 +97,12 @@ CREATE TABLE `alus_la` (
   `ip_address` varchar(15) NOT NULL,
   `login` varchar(100) NOT NULL,
   `time` int(10) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `alus_mg`
+-- Struktur dari tabel `alus_mg`
 --
 
 CREATE TABLE `alus_mg` (
@@ -113,10 +113,10 @@ CREATE TABLE `alus_mg` (
   `menu_target` varchar(255) DEFAULT NULL,
   `menu_icon` varchar(25) DEFAULT NULL,
   `order_num` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `alus_mg`
+-- Dumping data untuk tabel `alus_mg`
 --
 
 INSERT INTO `alus_mg` (`menu_id`, `menu_parent`, `menu_nama`, `menu_uri`, `menu_target`, `menu_icon`, `order_num`) VALUES
@@ -132,7 +132,7 @@ INSERT INTO `alus_mg` (`menu_id`, `menu_parent`, `menu_nama`, `menu_uri`, `menu_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `alus_mga`
+-- Struktur dari tabel `alus_mga`
 --
 
 CREATE TABLE `alus_mga` (
@@ -147,10 +147,10 @@ CREATE TABLE `alus_mga` (
   `pev` datetime DEFAULT NULL,
   `psed` datetime DEFAULT NULL,
   `peed` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `alus_mga`
+-- Dumping data untuk tabel `alus_mga`
 --
 
 INSERT INTO `alus_mga` (`id`, `id_group`, `id_menu`, `can_view`, `can_edit`, `can_add`, `can_delete`, `psv`, `pev`, `psed`, `peed`) VALUES
@@ -174,7 +174,7 @@ INSERT INTO `alus_mga` (`id`, `id_group`, `id_menu`, `can_view`, `can_edit`, `ca
 -- --------------------------------------------------------
 
 --
--- Table structure for table `alus_u`
+-- Struktur dari tabel `alus_u`
 --
 
 CREATE TABLE `alus_u` (
@@ -204,10 +204,10 @@ CREATE TABLE `alus_u` (
   `bpd_id` int(11) DEFAULT NULL,
   `bpd_id_2` int(11) DEFAULT NULL,
   `staff_pmk_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `alus_u`
+-- Dumping data untuk tabel `alus_u`
 --
 
 INSERT INTO `alus_u` (`id`, `username`, `job_title`, `abc`, `ip_address`, `ghi`, `def`, `mno`, `jkl`, `stu`, `pqr`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`, `ht`, `picture`, `mdo_id`, `mos_id`, `grup_type`, `bpd_id`, `bpd_id_2`, `staff_pmk_id`) VALUES
@@ -273,17 +273,17 @@ INSERT INTO `alus_u` (`id`, `username`, `job_title`, `abc`, `ip_address`, `ghi`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `alus_ug`
+-- Struktur dari tabel `alus_ug`
 --
 
 CREATE TABLE `alus_ug` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL,
   `group_id` mediumint(8) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `alus_ug`
+-- Dumping data untuk tabel `alus_ug`
 --
 
 INSERT INTO `alus_ug` (`id`, `user_id`, `group_id`) VALUES
@@ -292,7 +292,7 @@ INSERT INTO `alus_ug` (`id`, `user_id`, `group_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Struktur dari tabel `categories`
 --
 
 CREATE TABLE `categories` (
@@ -305,10 +305,10 @@ CREATE TABLE `categories` (
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `created_by_user_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `categories`
+-- Dumping data untuk tabel `categories`
 --
 
 INSERT INTO `categories` (`id`, `name`, `description`, `picture`, `is_active`, `deleted_at`, `updated_at`, `created_at`, `created_by_user_id`) VALUES
@@ -335,12 +335,14 @@ INSERT INTO `categories` (`id`, `name`, `description`, `picture`, `is_active`, `
 (21, 'Romance', '', NULL, 1, NULL, NULL, '2023-01-24 06:41:34', NULL),
 (22, 'Science', '', NULL, 1, NULL, NULL, '2023-01-24 06:41:46', NULL),
 (23, 'Travel', '', NULL, 1, NULL, NULL, '2023-01-24 06:41:57', NULL),
-(24, 'Western', '', NULL, 1, NULL, NULL, '2023-01-24 06:42:06', NULL);
+(24, 'Western', '', NULL, 1, NULL, NULL, '2023-01-24 06:42:06', NULL),
+(25, 'Drama', '', NULL, 1, NULL, NULL, '2023-01-25 10:29:29', NULL),
+(26, 'Thriller', '', NULL, 1, NULL, NULL, '2023-01-25 12:08:51', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comments`
+-- Struktur dari tabel `comments`
 --
 
 CREATE TABLE `comments` (
@@ -349,10 +351,10 @@ CREATE TABLE `comments` (
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `comment` text DEFAULT NULL,
   `movie_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `comments`
+-- Dumping data untuk tabel `comments`
 --
 
 INSERT INTO `comments` (`id`, `name`, `created_at`, `comment`, `movie_id`) VALUES
@@ -362,7 +364,7 @@ INSERT INTO `comments` (`id`, `name`, `created_at`, `comment`, `movie_id`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `movies`
+-- Struktur dari tabel `movies`
 --
 
 CREATE TABLE `movies` (
@@ -380,49 +382,53 @@ CREATE TABLE `movies` (
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `created_by_user_id` int(11) DEFAULT NULL,
   `is_featured` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `movies`
+-- Dumping data untuk tabel `movies`
 --
 
 INSERT INTO `movies` (`id`, `title`, `rating`, `year`, `duration`, `age`, `description`, `file_movie`, `picture`, `link_trailer`, `updated_at`, `created_at`, `created_by_user_id`, `is_featured`) VALUES
-(6, 'The Last of Us (2023)', 9.6, 2023, '1 Jam 5 Menit', 18, 'Twenty years after modern civilization has been destroyed. Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the U.S. and depend on each other for survival.', 'movie_167428166635.mp4', '167454841463.jpeg', 'https://youtu.be/N5XCOwFI9w8', '2023-01-24 08:20:15', '2023-01-11 17:12:48', NULL, 1),
 (7, 'There’s Something Wrong with the Children (2023)', 6.3, 2023, '2jam 30menit', 18, 'Margaret and Ben take a weekend trip with longtime friends Ellie and Thomas and their two young children. Eventually, Ben begins to suspect something supernatural is occurring when the kids behave strangely after disappearing into the woods overnight.', '167454331788.mp4', '167454830588.jpg', '', '2023-01-24 08:18:26', '2023-01-20 07:12:37', NULL, 2),
-(8, 'Detective Knight: Redemption (2022)', 4.8, 2022, '1 Jam 33 Menit', 18, 'In custody in New York, Detective James Knight finds himself in the middle of a jailbreak led by The Christmas Bomber, a brutal fanatic whose Santa Claus disciples are terrorizing the city. With the promised return of his badge in exchange for taking out the terrorists, the steely-eyed Knight doles out mercy for the just…and merciless justice for all the rest.', '167454724629.mp4', '167454859023.jpg', '', '2023-01-24 08:23:11', '2023-01-20 07:37:09', NULL, 0),
-(9, 'Money Heist: Korea – Joint Economic Area (2022)', 9.1, 2022, '', 0, 'Synopsis\r\n??? ?: ?????? – Disguised under the shadows of a mask, a crew of desperados band together under the leadership of a criminal mastermind known only as “The Professor” to pull off the biggest heist Korea has ever seen.', NULL, '167454997346.jpg', '', '2023-01-24 08:46:13', '2023-01-20 07:37:57', NULL, 2),
-(11, 'The Price We Pay (2023)', 5.3, 2023, '1Jam 25Menit', 18, 'After a pawn shop robbery goes askew, two criminals take refuge at a remote farmhouse to try to let the heat die down, but find something much more menacing.', '167446640621.mp4', '167454877764.jpg', '', '2023-01-24 08:26:18', '2023-01-23 09:33:27', NULL, 2);
+(8, 'Detective Knight: Redemption (2022)', 4.8, 2022, '1 Jam 33 Menit', 18, 'In custody in New York, Detective James Knight finds himself in the middle of a jailbreak led by The Christmas Bomber, a brutal fanatic whose Santa Claus disciples are terrorizing the city. With the promised return of his badge in exchange for taking out the terrorists, the steely-eyed Knight doles out mercy for the just…and merciless justice for all the rest.', '167454724629.mp4', '167454859023.jpg', '', '2023-01-25 10:31:00', '2023-01-20 07:37:09', NULL, 3),
+(9, 'Money Heist: Korea – Joint Economic Area (2022)', 9.1, 2022, '', 0, 'Synopsis\r\n??? ?: ?????? – Disguised under the shadows of a mask, a crew of desperados band together under the leadership of a criminal mastermind known only as “The Professor” to pull off the biggest heist Korea has ever seen.', NULL, '167454997346.jpg', '', '2023-01-25 10:31:04', '2023-01-20 07:37:57', NULL, 4),
+(11, 'The Price We Pay (2023)', 5.3, 2023, '1Jam 25Menit', 18, 'After a pawn shop robbery goes askew, two criminals take refuge at a remote farmhouse to try to let the heat die down, but find something much more menacing.', '167446640621.mp4', '167454877764.jpg', '', '2023-01-25 10:31:16', '2023-01-23 09:33:27', NULL, 5),
+(12, 'Perang', 0, 0, '', 0, '', NULL, '167464270549.jfif', '', '2023-01-25 10:33:04', '2023-01-25 10:31:45', NULL, 1),
+(13, '365 Days (2020)', 7.6, 2022, '', 18, 'Laura, in order to save her relationship from falling apart, goes to Sicily, where she meets Massimo. A dangerous man, the head of a mafia family, kidnaps her and gives 365 days to love him.', NULL, '167464281696.jpg', '', '2023-01-25 12:07:48', '2023-01-25 10:33:29', NULL, 6);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `movie_categories`
+-- Struktur dari tabel `movie_categories`
 --
 
 CREATE TABLE `movie_categories` (
   `id` int(11) NOT NULL,
   `movie_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `movie_categories`
+-- Dumping data untuk tabel `movie_categories`
 --
 
 INSERT INTO `movie_categories` (`id`, `movie_id`, `category_id`) VALUES
 (1, 5, 1),
 (29, 10, 1),
-(34, 7, 13),
 (35, 6, 1),
 (36, 6, 3),
 (37, 8, 1),
 (38, 11, 1),
-(39, 9, 1);
+(39, 9, 1),
+(40, 12, 15),
+(42, 13, 25),
+(43, 7, 1),
+(44, 7, 26);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reviews`
+-- Struktur dari tabel `reviews`
 --
 
 CREATE TABLE `reviews` (
@@ -433,10 +439,10 @@ CREATE TABLE `reviews` (
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `rating` int(11) DEFAULT NULL,
   `movie_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `reviews`
+-- Dumping data untuk tabel `reviews`
 --
 
 INSERT INTO `reviews` (`id`, `title`, `review`, `name`, `created_at`, `rating`, `movie_id`) VALUES
@@ -445,7 +451,7 @@ INSERT INTO `reviews` (`id`, `title`, `review`, `name`, `created_at`, `rating`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sys_codes`
+-- Struktur dari tabel `sys_codes`
 --
 
 CREATE TABLE `sys_codes` (
@@ -457,10 +463,10 @@ CREATE TABLE `sys_codes` (
   `srn_year` int(11) DEFAULT NULL,
   `srn_month` int(11) DEFAULT NULL,
   `srn_reset_by` varchar(20) DEFAULT 'NONE'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=COMPACT;
 
 --
--- Dumping data for table `sys_codes`
+-- Dumping data untuk tabel `sys_codes`
 --
 
 INSERT INTO `sys_codes` (`srn_id`, `srn_code`, `srn_value`, `srn_length`, `srn_format`, `srn_year`, `srn_month`, `srn_reset_by`) VALUES
@@ -481,31 +487,31 @@ INSERT INTO `sys_codes` (`srn_id`, `srn_code`, `srn_value`, `srn_length`, `srn_f
 --
 
 --
--- Indexes for table `alus_g`
+-- Indeks untuk tabel `alus_g`
 --
 ALTER TABLE `alus_g`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Indexes for table `alus_gd`
+-- Indeks untuk tabel `alus_gd`
 --
 ALTER TABLE `alus_gd`
   ADD PRIMARY KEY (`agd_id`) USING BTREE;
 
 --
--- Indexes for table `alus_la`
+-- Indeks untuk tabel `alus_la`
 --
 ALTER TABLE `alus_la`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Indexes for table `alus_mg`
+-- Indeks untuk tabel `alus_mg`
 --
 ALTER TABLE `alus_mg`
   ADD PRIMARY KEY (`menu_id`) USING BTREE;
 
 --
--- Indexes for table `alus_mga`
+-- Indeks untuk tabel `alus_mga`
 --
 ALTER TABLE `alus_mga`
   ADD PRIMARY KEY (`id`) USING BTREE,
@@ -513,7 +519,7 @@ ALTER TABLE `alus_mga`
   ADD KEY `fk_menu_deleted` (`id_menu`) USING BTREE;
 
 --
--- Indexes for table `alus_u`
+-- Indeks untuk tabel `alus_u`
 --
 ALTER TABLE `alus_u`
   ADD PRIMARY KEY (`id`) USING BTREE,
@@ -521,7 +527,7 @@ ALTER TABLE `alus_u`
   ADD KEY `sys_users_idx2` (`id`) USING BTREE;
 
 --
--- Indexes for table `alus_ug`
+-- Indeks untuk tabel `alus_ug`
 --
 ALTER TABLE `alus_ug`
   ADD PRIMARY KEY (`id`) USING BTREE,
@@ -530,136 +536,129 @@ ALTER TABLE `alus_ug`
   ADD KEY `fk_users_groups_groups1_idx` (`group_id`) USING BTREE;
 
 --
--- Indexes for table `categories`
+-- Indeks untuk tabel `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Indexes for table `comments`
+-- Indeks untuk tabel `comments`
 --
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Indexes for table `movies`
+-- Indeks untuk tabel `movies`
 --
 ALTER TABLE `movies`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Indexes for table `movie_categories`
+-- Indeks untuk tabel `movie_categories`
 --
 ALTER TABLE `movie_categories`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Indexes for table `reviews`
+-- Indeks untuk tabel `reviews`
 --
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`id`) USING BTREE;
 
 --
--- Indexes for table `sys_codes`
+-- Indeks untuk tabel `sys_codes`
 --
 ALTER TABLE `sys_codes`
   ADD PRIMARY KEY (`srn_id`) USING BTREE;
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `alus_g`
+-- AUTO_INCREMENT untuk tabel `alus_g`
 --
 ALTER TABLE `alus_g`
   MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `alus_gd`
+-- AUTO_INCREMENT untuk tabel `alus_gd`
 --
 ALTER TABLE `alus_gd`
   MODIFY `agd_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT for table `alus_la`
+-- AUTO_INCREMENT untuk tabel `alus_la`
 --
 ALTER TABLE `alus_la`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `alus_mg`
+-- AUTO_INCREMENT untuk tabel `alus_mg`
 --
 ALTER TABLE `alus_mg`
   MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
--- AUTO_INCREMENT for table `alus_mga`
+-- AUTO_INCREMENT untuk tabel `alus_mga`
 --
 ALTER TABLE `alus_mga`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3876;
 
 --
--- AUTO_INCREMENT for table `alus_u`
+-- AUTO_INCREMENT untuk tabel `alus_u`
 --
 ALTER TABLE `alus_u`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=181;
 
 --
--- AUTO_INCREMENT for table `alus_ug`
+-- AUTO_INCREMENT untuk tabel `alus_ug`
 --
 ALTER TABLE `alus_ug`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT untuk tabel `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT for table `comments`
+-- AUTO_INCREMENT untuk tabel `comments`
 --
 ALTER TABLE `comments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `movies`
+-- AUTO_INCREMENT untuk tabel `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `movie_categories`
+-- AUTO_INCREMENT untuk tabel `movie_categories`
 --
 ALTER TABLE `movie_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT for table `reviews`
+-- AUTO_INCREMENT untuk tabel `reviews`
 --
 ALTER TABLE `reviews`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `sys_codes`
+-- AUTO_INCREMENT untuk tabel `sys_codes`
 --
 ALTER TABLE `sys_codes`
   MODIFY `srn_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `alus_mga`
---
-ALTER TABLE `alus_mga`
-  ADD CONSTRAINT `alus_mga_ibfk_1` FOREIGN KEY (`id_group`) REFERENCES `alus_g` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `alus_mga_ibfk_2` FOREIGN KEY (`id_menu`) REFERENCES `alus_mg` (`menu_id`) ON DELETE CASCADE ON UPDATE NO ACTION;
-
---
--- Constraints for table `alus_ug`
+-- Ketidakleluasaan untuk tabel `alus_ug`
 --
 ALTER TABLE `alus_ug`
   ADD CONSTRAINT `alus_ug_ibfk_1` FOREIGN KEY (`group_id`) REFERENCES `alus_g` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,

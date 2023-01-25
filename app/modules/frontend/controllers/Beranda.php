@@ -30,13 +30,49 @@ class Beranda extends CI_Controller
             $this->db->where('category_id',1);
             $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
             $data_gambar['action_movies']= $this->db->get('movies');
-            //New Episode
-
-            //Newest Season
-            $this->db->where('is_featured',2);
-            $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
-            $data_gambar['news_season']= $this->db->get('movies');
-            /*DATA*/
+			 // Drama
+			 $this->db->where('category_id',25);
+			 $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+			 $data_gambar['drama']= $this->db->get('movies');
+			  // War
+			  $this->db->where('category_id',15);
+			  $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+			  $data_gambar['war']= $this->db->get('movies');
+			   // Romance
+			 $this->db->where('category_id',21);
+			 $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+			 $data_gambar['romance']= $this->db->get('movies');
+			  // Thriller
+			  $this->db->where('category_id',25);
+			  $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+			  $data_gambar['thriller']= $this->db->get('movies');
+           //Featured
+		   $this->db->where('is_featured',1);
+		   $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+		   $data_gambar['featured1']= $this->db->get('movies');
+		    //Featured
+			$this->db->where('is_featured',2);
+			$this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+			$data_gambar['featured2']= $this->db->get('movies');
+			 //Featured
+			 $this->db->where('is_featured',3);
+			 $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+			 $data_gambar['featured3']= $this->db->get('movies');
+			  //Featured
+			  $this->db->where('is_featured',4);
+			  $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+			  $data_gambar['featured4']= $this->db->get('movies');
+			   //Featured
+			   $this->db->where('is_featured',5);
+			   $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+			   $data_gambar['featured5']= $this->db->get('movies');
+			    //Featured
+				$this->db->where('is_featured',6);
+				$this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+				$data_gambar['featured6']= $this->db->get('movies');
+			
+			
+			/*DATA*/
 			// disini dikasih datanya
 			
             /*END DATA*/
