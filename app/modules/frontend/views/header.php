@@ -24,7 +24,7 @@
 									<?php 
 									$categories = $this->db->get('categories')->result();
 									foreach ($categories as $category) {?>
-										<li><a href="<?php echo base_url('category/'.$category->id);?>"><?= $category->name;?></a></li>
+										<li><a href="<?php echo base_url('/frontend/beranda/categories/'.$category->id);?>"><?= $category->name;?></a></li>
 									<?php 
 									}
 									?>

@@ -110,4 +110,14 @@ class Beranda_model extends CI_Model {
             return $query->result();
     }
 
+	public function getcategories($id)
+    {
+        $this->db->select('*');
+        $this->db->from('categories');
+        $this->db->where('id',$id);
+        $query = $this->db->get();
+        if($query->num_rows()>0)
+            return $query->result();
+    }
+
 }

@@ -82,6 +82,7 @@ class Beranda extends CI_Controller
             $this->load->view('beranda', $data_gambar);      
             $this->load->view('footer');
     }
+
     public function details($id)
     {
         $data['title'] = "Details Movies";
@@ -89,6 +90,39 @@ class Beranda extends CI_Controller
         $this->load->view('details', $data);   
         $this->load->view('footer');
     }
+	public function categories($id)
+    {
+        $data['title'] = "Details Movies";
+        $data['movies'] = $this->Beranda_model->getcategories($id);
+		
+		 //Featured
+		 $this->db->where('category_id',$id);
+		 $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+		 $data['featured1']= $this->db->get('movies');
+		  //Featured
+		  $this->db->where('category_id',$id);
+		  $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+		  $data['featured2']= $this->db->get('movies');
+		   //Featured
+		   $this->db->where('category_id',$id);
+		   $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+		   $data['featured3']= $this->db->get('movies');
+			//Featured
+			$this->db->where('category_id',$id);
+			$this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+			$data['featured4']= $this->db->get('movies');
+			 //Featured
+			 $this->db->where('category_id',$id);
+			 $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+			 $data['featured5']= $this->db->get('movies');
+			  //Featured
+			  $this->db->where('category_id',$id);
+			  $this->db->join('movie_categories','movie_categories.movie_id = movies.id','left');
+			  $data['featured6']= $this->db->get('movies');
+			  $this->load->view('categories', $data);   
+			  $this->load->view('footer');
+    }
+
     public function comment($id)
     {
         $data['title'] = "Details Comment";
