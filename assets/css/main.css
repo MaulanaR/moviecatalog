@@ -1001,13 +1001,13 @@ body::-webkit-scrollbar-thumb {
 	Section
 ==============================*/
 .section {
-  padding: 60px 0;
+  padding: 40px 0;
   position: relative;
   overflow: hidden;
 }
-.section--pb0 {
-  padding-top: 0px;
-}
+/* .section--pb0 {
+ 
+} */
 .section--head {
   margin-top: 80px;
   padding-top: 30px;

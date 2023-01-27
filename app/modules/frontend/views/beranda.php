@@ -239,7 +239,7 @@
 	</div>
 	<!-- end catalog -->
 	<!-- popular -->
-	<section class="section">
+	<section class="section" style="border-top: 1px solid rgba(47,128,237,0.1); border-bottom: 1px solid rgba(47,128,237,0.1);">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -296,7 +296,7 @@
 	<!-- end popular -->
 
 	<!-- Film Action -->
-	<section class="section section--pb0">
+	<section class="section" style="border-top: 1px solid rgba(47,128,237,0.1); border-bottom: 1px solid rgba(47,128,237,0.1);">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -350,7 +350,7 @@
 	<!-- end film action -->
 
 	<!-- Film drama-->
-	<section class="section section--pb0">
+	<section class="section" style="border-top: 1px solid rgba(47,128,237,0.1); border-bottom: 1px solid rgba(47,128,237,0.1);">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -403,7 +403,7 @@
 	</section>
 	<!-- end drama -->
 	<!-- Romance -->
-	<section class="section section--pb0">
+	<section class="section" style="border-top: 1px solid rgba(47,128,237,0.1); border-bottom: 1px solid rgba(47,128,237,0.1);">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -455,7 +455,7 @@
 				</div>
 	</section>
 	<!-- thriller -->
-	<section class="section section--pb0">
+	<section class="section" style="border-top: 1px solid rgba(47,128,237,0.1); border-bottom: 1px solid rgba(47,128,237,0.1);">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -508,7 +508,7 @@
 	</section>
 	<!-- end thriller -->
 	<!-- War -->
-	<section class="section section--pb0 section--gradient">
+	<section class="section" style="border-top: 1px solid rgba(47,128,237,0.1); border-bottom: 1px solid rgba(47,128,237,0.1);">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
