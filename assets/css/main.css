@@ -871,6 +871,11 @@ body::-webkit-scrollbar-thumb {
 .home__title b {
   font-weight: 400;
 }
+@media (min-width: 250px) {
+  .home__card {
+    width: 250px;
+  }
+}
 @media (min-width: 360px) {
   .home__card {
     width: 320px;
@@ -889,7 +894,7 @@ body::-webkit-scrollbar-thumb {
     padding: 30px;
   }
   .home__card div h2 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .home__carousel {
     padding-left: calc((100vw - 510px) / 2);
@@ -948,7 +953,7 @@ body::-webkit-scrollbar-thumb {
     top: auto;
   }
   .home__card {
-    width: 350px;
+    width: 250px;
   }
   .home__nav {
     display: block;
@@ -4426,7 +4431,7 @@ body::-webkit-scrollbar-thumb {
 	Footer
 ==============================*/
 .footer {
-  background-color: #131720;
+  background-color: #131701;
   padding: 30px 0;
   position: relative;
   overflow: hidden;
@@ -4557,8 +4562,8 @@ body::-webkit-scrollbar-thumb {
     padding: 40px 0;
   }
   .footer__content {
-    margin-top: 80px;
-    padding-top: 40px;
+    margin-top: 0px;
+    padding-top: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

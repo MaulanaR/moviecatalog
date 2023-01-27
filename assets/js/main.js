@@ -216,8 +216,8 @@ $(document).ready(function () {
 		touchDrag: true,
 		dots: true,
 		loop: true,
-		autoplay: false,
-		smartSpeed: 600,
+		autoplay: true,
+		smartSpeed: 100,
 		margin: 20,
 		autoHeight: true,
 		responsive: {

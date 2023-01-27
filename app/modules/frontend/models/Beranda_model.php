@@ -112,12 +112,12 @@ class Beranda_model extends CI_Model {
 
 	public function getcategories($id)
     {
-        $this->db->select('*');
-        $this->db->from('categories');
-        $this->db->where('id',$id);
+        $this->db->select('movies.*');
+        $this->db->from('movies');
+        $this->db->where('category_id',$id);
+		$this->db->join('movie_categories', 'movie_categories.movie_id = movies.id', 'left');
         $query = $this->db->get();
-        if($query->num_rows()>0)
-            return $query->result();
+        return $query->result();
     }
 
 }

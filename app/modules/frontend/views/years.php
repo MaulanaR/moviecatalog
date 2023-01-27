@@ -37,7 +37,7 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="home--title">
-							<h1 class='home__title' style="padding-left:500px; padding-right:500px;"><?php echo $category->name; ?></h1>
+							<h1 class='home__title' style="padding-left:500px; padding-right:500px;"><?php echo $year; ?></h1>
 						</div>
 					</div>
 				</div>
