@@ -46,7 +46,11 @@ class Data_comments extends CI_Controller
             $no++;
             $row = array();
             $row[] = $no;
-            $row[] = $film->title;
+            if(isset($film->title)) {
+                $row[] = $film->title;
+            } else {
+                $row[] = "Deleted Movie";
+            }
             $row[] = $person->name;
             $row[] = $person->comment;
             $row[] = date('d-m-Y H:i',strtotime($person->created_at));

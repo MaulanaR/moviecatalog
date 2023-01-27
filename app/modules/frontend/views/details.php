@@ -115,7 +115,7 @@
 						</div>
 						<!-- end video player -->
 						<div class="col-xl-2">
-							<div class="partners__img" >
+							<div class="partners__img">
 								<img src="<?php echo base_url() . 'assets/movies/' . $row->picture; ?>" alt="" style="border-radius: 2%;">
 							</div>
 						</div>
@@ -335,11 +335,16 @@
 											</li>
 										</ul>
 									</div> -->
-										<form action="#" class="comments__form">
+										<form action="<?php echo base_url('frontend/beranda/savecomment'); ?>" class="comments__form" method="POST">
+											<input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>" />
+											<input type="hidden" name="movie_id" value="<?php echo $row->id; ?>" />
 											<div class="sign__group">
-												<textarea id="text" name="text" class="sign__textarea" placeholder="Add comment"></textarea>
+												<input type="text" name="name" class="sign__input" value="" placeholder="Your name" required="required" />
 											</div>
-											<button type="button" class="sign__btn">Send</button>
+											<div class="sign__group">
+												<textarea id="text" name="comment" class="sign__textarea" placeholder="Add comment" required="required"></textarea>
+											</div>
+											<button type="submit" class="sign__btn">Send</button>
 										</form>
 									</div>
 									<!-- end comments -->
@@ -365,9 +370,14 @@
 											<?php } ?>
 										</ul>
 
-										<form action="#" class="reviews__form">
+										<form action="<?php echo base_url('frontend/beranda/savereview'); ?>" method="POST" class="reviews__form">
+											<input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>" />
+											<input type="hidden" name="movie_id" value="<?php echo $row->id; ?>" />
 											<div class="row">
 												<div class="col-12 col-md-9 col-lg-10 col-xl-9">
+													<div class="sign__group">
+														<input type="text" name="name" class="sign__input" placeholder="Your name">
+													</div>
 													<div class="sign__group">
 														<input type="text" name="title" class="sign__input" placeholder="Title">
 													</div>
@@ -398,7 +408,7 @@
 												</div>
 
 												<div class="col-12">
-													<button type="button" class="sign__btn">Send</button>
+													<button type="submit" class="sign__btn">Send</button>
 												</div>
 											</div>
 										</form>

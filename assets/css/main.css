@@ -4431,7 +4431,7 @@ body::-webkit-scrollbar-thumb {
 	Footer
 ==============================*/
 .footer {
-  background-color: #131701;
+  background-color: #131720;
   padding: 30px 0;
   position: relative;
   overflow: hidden;
@@ -4562,8 +4562,8 @@ body::-webkit-scrollbar-thumb {
     padding: 40px 0;
   }
   .footer__content {
-    margin-top: 0px;
-    padding-top: 0px;
+    margin-top: 80px;
+    padding-top: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

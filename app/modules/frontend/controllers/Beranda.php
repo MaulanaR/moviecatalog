@@ -121,6 +121,30 @@ class Beranda extends CI_Controller
 		$data['comments'] = $this->Beranda_model->getcomment($id);
 		$this->load->view('details', $data);
 	}
+
+	public function savecomment()
+	{
+		$insert = array(
+			'name' => $this->input->post('name'),
+			'comment' => $this->input->post('comment'),
+			'movie_id' => $this->input->post('movie_id'),
+		);
+		$this->db->insert('comments', $insert);
+		redirect('details/'.$this->input->post('movie_id'),'refresh');
+	}
+
+	public function savereview()
+	{
+		$insert = array(
+			'name' => $this->input->post('name'),
+			'title' => $this->input->post('title'),
+			'rating' => $this->input->post('select'),
+			'review' => $this->input->post('text2'),
+			'movie_id' => $this->input->post('movie_id'),
+		);
+		$this->db->insert('reviews', $insert);
+		redirect('details/'.$this->input->post('movie_id'),'refresh');
+	}
 }
 
 /* Location: ./application/modules/X/controllers/X.php */
