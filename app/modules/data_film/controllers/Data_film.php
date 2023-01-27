@@ -84,6 +84,7 @@ class Data_film extends CI_Controller
         $data = array(
             'title' => $this->input->post('title'),
             'rating' => $this->input->post('rating'),
+            'is_featured' => $this->input->post('featured'),
             'year' => $this->input->post('year'),
             'duration' => $this->input->post('duration'),
             'age' => $this->input->post('age'),
@@ -146,6 +147,7 @@ class Data_film extends CI_Controller
         $data = array(
             'title' => $this->input->post('title'),
             'rating' => $this->input->post('rating'),
+            'is_featured' => $this->input->post('featured'),
             'year' => $this->input->post('year'),
             'duration' => $this->input->post('duration'),
             'age' => $this->input->post('age'),

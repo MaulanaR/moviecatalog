@@ -34,6 +34,10 @@
           <input type="number" class="form-control" name="rating" min="0" max="10">
         </div>
         <div class="form-group">
+          <label>Featured</label>
+          <input type="number" class="form-control" name="featured" min="0" max="4">
+        </div>
+        <div class="form-group">
           <label>Tahun Rilis</label>
           <input type="text" class="form-control" name="year">
         </div>
