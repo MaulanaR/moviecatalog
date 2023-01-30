@@ -87,8 +87,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<div class="home home--title">
-						<h3 class="home__title" style="padding-left:50px;"><b>Featured</b></h3>
+					<div class="col-12" style="padding-right: 0px; padding-left:0px;">
+					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px; font-size:30px;">FEATURED</h2>
 					</div>
 
 					<div class="row row--grid">
@@ -109,18 +109,10 @@
 												</svg></button>
 											<span class="card__rating"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 													<path d="M22,9.67A1,1,0,0,0,21.14,9l-5.69-.83L12.9,3a1,1,0,0,0-1.8,0L8.55,8.16,2.86,9a1,1,0,0,0-.81.68,1,1,0,0,0,.25,1l4.13,4-1,5.68A1,1,0,0,0,6.9,21.44L12,18.77l5.1,2.67a.93.93,0,0,0,.46.12,1,1,0,0,0,.59-.19,1,1,0,0,0,.4-1l-1-5.68,4.13-4A1,1,0,0,0,22,9.67Zm-6.15,4a1,1,0,0,0-.29.88l.72,4.2-3.76-2a1.06,1.06,0,0,0-.94,0l-3.76,2,.72-4.2a1,1,0,0,0-.29-.88l-3-3,4.21-.61a1,1,0,0,0,.76-.55L12,5.7l1.88,3.82a1,1,0,0,0,.76.55l4.21.61Z" />
-												</svg> 8.3</span>
-											<h3 class="card__title"><a href="<?php echo base_url(); ?>/details/<?php echo $row->id; ?>"><?php echo ucwords($row->title); ?></a></h3>
+												</svg><?php echo $row->rating; ?></span>
+											<h3 class="card__title" style="font-size:14px ;"><a href="<?php echo base_url(); ?>/details/<?php echo $row->id; ?>"><?php echo ucwords($row->title); ?></a></h3>
 											<ul class="card__list">
-												<?php
-												$this->db->where('movie_id', $row->id);
-												$this->db->join('categories', 'categories.id = movie_categories.category_id', 'left');
-												$cat = $this->db->get('movie_categories')->result();
-												foreach ($cat as $val_cat) {
-													echo "<li>" . $val_cat->name . "</li>";
-												}
-												?>
-												<li><?php echo $row->year; ?></li>
+												<li style="color:#707070;"><?php echo $row->year; ?></li>
 											</ul>
 										</div>
 									<?php } ?>
@@ -144,18 +136,10 @@
 												</svg></button>
 											<span class="card__rating"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 													<path d="M22,9.67A1,1,0,0,0,21.14,9l-5.69-.83L12.9,3a1,1,0,0,0-1.8,0L8.55,8.16,2.86,9a1,1,0,0,0-.81.68,1,1,0,0,0,.25,1l4.13,4-1,5.68A1,1,0,0,0,6.9,21.44L12,18.77l5.1,2.67a.93.93,0,0,0,.46.12,1,1,0,0,0,.59-.19,1,1,0,0,0,.4-1l-1-5.68,4.13-4A1,1,0,0,0,22,9.67Zm-6.15,4a1,1,0,0,0-.29.88l.72,4.2-3.76-2a1.06,1.06,0,0,0-.94,0l-3.76,2,.72-4.2a1,1,0,0,0-.29-.88l-3-3,4.21-.61a1,1,0,0,0,.76-.55L12,5.7l1.88,3.82a1,1,0,0,0,.76.55l4.21.61Z" />
-												</svg> 8.3</span>
-											<h3 class="card__title"><a href="<?php echo base_url(); ?>/details/<?php echo $row->id; ?>"><?php echo ucwords($row->title); ?></a></h3>
+												</svg><?php echo $row->rating; ?></span>
+												<h3 class="card__title" style="font-size:14px ;"><a href="<?php echo base_url(); ?>/details/<?php echo $row->id; ?>"><?php echo ucwords($row->title); ?></a></h3>
 											<ul class="card__list">
-												<?php
-												$this->db->where('movie_id', $row->id);
-												$this->db->join('categories', 'categories.id = movie_categories.category_id', 'left');
-												$cat = $this->db->get('movie_categories')->result();
-												foreach ($cat as $val_cat) {
-													echo "<li>" . $val_cat->name . "</li>";
-												}
-												?>
-												<li><?php echo $row->year; ?></li>
+												<li style="color:#707070;"><?php echo $row->year; ?></li>
 											</ul>
 										</div>
 									<?php } ?>
@@ -179,18 +163,10 @@
 												</svg></button>
 											<span class="card__rating"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 													<path d="M22,9.67A1,1,0,0,0,21.14,9l-5.69-.83L12.9,3a1,1,0,0,0-1.8,0L8.55,8.16,2.86,9a1,1,0,0,0-.81.68,1,1,0,0,0,.25,1l4.13,4-1,5.68A1,1,0,0,0,6.9,21.44L12,18.77l5.1,2.67a.93.93,0,0,0,.46.12,1,1,0,0,0,.59-.19,1,1,0,0,0,.4-1l-1-5.68,4.13-4A1,1,0,0,0,22,9.67Zm-6.15,4a1,1,0,0,0-.29.88l.72,4.2-3.76-2a1.06,1.06,0,0,0-.94,0l-3.76,2,.72-4.2a1,1,0,0,0-.29-.88l-3-3,4.21-.61a1,1,0,0,0,.76-.55L12,5.7l1.88,3.82a1,1,0,0,0,.76.55l4.21.61Z" />
-												</svg> 8.3</span>
-											<h3 class="card__title"><a href="<?php echo base_url(); ?>/details/<?php echo $row->id; ?>"><?php echo ucwords($row->title); ?></a></h3>
+												</svg><?php echo $row->rating; ?></span>
+												<h3 class="card__title" style="font-size:14px ;"><a href="<?php echo base_url(); ?>/details/<?php echo $row->id; ?>"><?php echo ucwords($row->title); ?></a></h3>
 											<ul class="card__list">
-												<?php
-												$this->db->where('movie_id', $row->id);
-												$this->db->join('categories', 'categories.id = movie_categories.category_id', 'left');
-												$cat = $this->db->get('movie_categories')->result();
-												foreach ($cat as $val_cat) {
-													echo "<li>" . $val_cat->name . "</li>";
-												}
-												?>
-												<li><?php echo $row->year; ?></li>
+												<li style="color:#707070;"><?php echo $row->year; ?></li>
 											</ul>
 										</div>
 									<?php } ?>
@@ -214,18 +190,10 @@
 												</svg></button>
 											<span class="card__rating"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 													<path d="M22,9.67A1,1,0,0,0,21.14,9l-5.69-.83L12.9,3a1,1,0,0,0-1.8,0L8.55,8.16,2.86,9a1,1,0,0,0-.81.68,1,1,0,0,0,.25,1l4.13,4-1,5.68A1,1,0,0,0,6.9,21.44L12,18.77l5.1,2.67a.93.93,0,0,0,.46.12,1,1,0,0,0,.59-.19,1,1,0,0,0,.4-1l-1-5.68,4.13-4A1,1,0,0,0,22,9.67Zm-6.15,4a1,1,0,0,0-.29.88l.72,4.2-3.76-2a1.06,1.06,0,0,0-.94,0l-3.76,2,.72-4.2a1,1,0,0,0-.29-.88l-3-3,4.21-.61a1,1,0,0,0,.76-.55L12,5.7l1.88,3.82a1,1,0,0,0,.76.55l4.21.61Z" />
-												</svg> 8.3</span>
-											<h3 class="card__title"><a href="<?php echo base_url(); ?>/details/<?php echo $row->id; ?>"><?php echo ucwords($row->title); ?></a></h3>
+												</svg><?php echo $row->rating; ?></span>
+												<h3 class="card__title" style="font-size:14px ;"><a href="<?php echo base_url(); ?>/details/<?php echo $row->id; ?>"><?php echo ucwords($row->title); ?></a></h3>
 											<ul class="card__list">
-												<?php
-												$this->db->where('movie_id', $row->id);
-												$this->db->join('categories', 'categories.id = movie_categories.category_id', 'left');
-												$cat = $this->db->get('movie_categories')->result();
-												foreach ($cat as $val_cat) {
-													echo "<li>" . $val_cat->name . "</li>";
-												}
-												?>
-												<li><?php echo $row->year; ?></li>
+												<li style="color:#707070;"><?php echo $row->year; ?></li>
 											</ul>
 										</div>
 									<?php } ?>
@@ -239,12 +207,12 @@
 	</div>
 	<!-- end catalog -->
 	<!-- popular -->
-	<section class="section" style="border-top: 1px solid rgba(47,128,237,0.1); border-bottom: 1px solid rgba(47,128,237,0.1);">
+	<section class="section">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px;">
-						<a>Popular</a>
+					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px; font-size:30px; margin-top: 30px;">
+						POPULAR
 					</h2>
 				</div>
 
@@ -281,11 +249,11 @@
 								</div>
 							<?php } ?>
 						</div>
-						<button class="section__nav section__nav--cards section__nav--prev" data-nav="#popular" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<button class="section__nav section__nav--cards section__nav--prev" data-nav="#subscriptions" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1.25 7.72559L16.25 7.72559" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 								<path d="M7.2998 1.70124L1.2498 7.72524L7.2998 13.7502" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 							</svg></button>
-						<button class="section__nav section__nav--cards section__nav--next" data-nav="#popular" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<button class="section__nav section__nav--cards section__nav--next" data-nav="#subscriptions" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15.75 7.72559L0.75 7.72559" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 								<path d="M9.7002 1.70124L15.7502 7.72524L9.7002 13.7502" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 							</svg></button>
@@ -296,11 +264,11 @@
 	<!-- end popular -->
 
 	<!-- Film Action -->
-	<section class="section" style="border-top: 1px solid rgba(47,128,237,0.1); border-bottom: 1px solid rgba(47,128,237,0.1);">
+	<section class="section" >
 		<div class="container">
-			<div class="row">
+			<div class="row" style="padding-top: 50px;border-top: 1px solid rgba(47,128,237,0.1);">
 				<div class="col-12">
-					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px;"><a href="<?php echo base_url(); ?>frontend/beranda/categories/<?php echo $row->id; ?>">Film Action</a></h2>
+					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px; font-size:30px;"><a href="<?php echo base_url(); ?>frontend/beranda/categories/<?php echo $row->id; ?>">FILM ACTION</a></h2>
 				</div>
 
 				<div class="col-12">
@@ -331,7 +299,7 @@
 											echo "<li>" . $val_cat->name . "</li>";
 										}
 										?>
-										<li><?php echo $row->year; ?></li>
+										<li style="color:#707070;"><?php echo $row->year; ?></li>
 									</ul>
 								</div>
 							<?php } ?>
@@ -348,13 +316,12 @@
 				</div>
 	</section>
 	<!-- end film action -->
-
 	<!-- Film drama-->
-	<section class="section" style="border-top: 1px solid rgba(47,128,237,0.1); border-bottom: 1px solid rgba(47,128,237,0.1);">
+	<section class="section" >
 		<div class="container">
-			<div class="row">
+			<div class="row" style="padding-top: 50px;border-top: 1px solid rgba(47,128,237,0.1);">
 				<div class="col-12">
-					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px;"><a href="category.html">Drama</a></h2>
+					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px; font-size:30px;"><a href="#">DRAMA KOREA</a></h2>
 				</div>
 
 				<div class="col-12">
@@ -385,16 +352,16 @@
 											echo "<li>" . $val_cat->name . "</li>";
 										}
 										?>
-										<li><?php echo $row->year; ?></li>
+										<li style="color:#707070;"><?php echo $row->year; ?></li>
 									</ul>
 								</div>
 							<?php } ?>
 						</div>
-						<button class="section__nav section__nav--cards section__nav--prev" data-nav="#binge" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<button class="section__nav section__nav--cards section__nav--prev" data-nav="#subscriptions" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1.25 7.72559L16.25 7.72559" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 								<path d="M7.2998 1.70124L1.2498 7.72524L7.2998 13.7502" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 							</svg></button>
-						<button class="section__nav section__nav--cards section__nav--next" data-nav="#binge" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<button class="section__nav section__nav--cards section__nav--next" data-nav="#subscriptions" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15.75 7.72559L0.75 7.72559" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 								<path d="M9.7002 1.70124L15.7502 7.72524L9.7002 13.7502" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 							</svg></button>
@@ -403,17 +370,16 @@
 	</section>
 	<!-- end drama -->
 	<!-- Romance -->
-	<section class="section" style="border-top: 1px solid rgba(47,128,237,0.1); border-bottom: 1px solid rgba(47,128,237,0.1);">
+	<section class="section">
 		<div class="container">
-			<div class="row">
+			<div class="row" style="padding-top: 50px;border-top: 1px solid rgba(47,128,237,0.1);">
 				<div class="col-12">
-					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px;"><a href="category.html">Romance</a></h2>
+					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px; font-size:30px;"><a href="#">ROMANCE</a></h2>
 				</div>
-
 				<div class="col-12">
 					<div class="section__carousel-wrap">
 						<div class="section__carousel owl-carousel" id="binge">
-							<?php foreach ($drama->result() as $row) { ?>
+							<?php foreach ($romance->result() as $row) { ?>
 								<div class="card">
 									<a href="<?php echo base_url(); ?>details/<?php echo $row->id; ?>" class="card__cover">
 										<img src="<?php echo base_url() . 'assets/movies/' . $row->picture; ?>" alt="">
@@ -430,24 +396,16 @@
 										</svg><?php echo $row->rating; ?></span>
 									<h3 class="card__title"><a href="d<?php echo base_url(); ?>/details/<?php echo $row->id; ?>"><?php echo ucwords($row->title); ?></a></h3>
 									<ul class="card__list">
-										<?php
-										$this->db->where('movie_id', $row->id);
-										$this->db->join('categories', 'categories.id = movie_categories.category_id', 'left');
-										$cat = $this->db->get('movie_categories')->result();
-										foreach ($cat as $val_cat) {
-											echo "<li>" . $val_cat->name . "</li>";
-										}
-										?>
-										<li><?php echo $row->year; ?></li>
+										<li style="color:#707070;"><?php echo $row->year; ?></li>
 									</ul>
 								</div>
 							<?php } ?>
 						</div>
-						<button class="section__nav section__nav--cards section__nav--prev" data-nav="#binge" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<button class="section__nav section__nav--cards section__nav--prev" data-nav="#subscriptions" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1.25 7.72559L16.25 7.72559" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 								<path d="M7.2998 1.70124L1.2498 7.72524L7.2998 13.7502" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 							</svg></button>
-						<button class="section__nav section__nav--cards section__nav--next" data-nav="#binge" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<button class="section__nav section__nav--cards section__nav--next" data-nav="#subscriptions" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15.75 7.72559L0.75 7.72559" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 								<path d="M9.7002 1.70124L15.7502 7.72524L9.7002 13.7502" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 							</svg></button>
@@ -455,17 +413,17 @@
 				</div>
 	</section>
 	<!-- thriller -->
-	<section class="section" style="border-top: 1px solid rgba(47,128,237,0.1); border-bottom: 1px solid rgba(47,128,237,0.1);">
+	<section class="section">
 		<div class="container">
-			<div class="row">
+			<div class="row" style="padding-top: 50px;border-top: 1px solid rgba(47,128,237,0.1);">
 				<div class="col-12">
-					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px;"><a href="category.html">Thriller</a></h2>
+					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px;font-size:30px;"><a href="#">THRILLER</a></h2>
 				</div>
 
 				<div class="col-12">
 					<div class="section__carousel-wrap">
 						<div class="section__carousel owl-carousel" id="binge">
-							<?php foreach ($drama->result() as $row) { ?>
+							<?php foreach ($thriller->result() as $row) { ?>
 								<div class="card">
 									<a href="<?php echo base_url(); ?>details/<?php echo $row->id; ?>" class="card__cover">
 										<img src="<?php echo base_url() . 'assets/movies/' . $row->picture; ?>" alt="">
@@ -482,24 +440,16 @@
 										</svg><?php echo $row->rating; ?></span>
 									<h3 class="card__title"><a href="d<?php echo base_url(); ?>/details/<?php echo $row->id; ?>"><?php echo ucwords($row->title); ?></a></h3>
 									<ul class="card__list">
-										<?php
-										$this->db->where('movie_id', $row->id);
-										$this->db->join('categories', 'categories.id = movie_categories.category_id', 'left');
-										$cat = $this->db->get('movie_categories')->result();
-										foreach ($cat as $val_cat) {
-											echo "<li>" . $val_cat->name . "</li>";
-										}
-										?>
-										<li><?php echo $row->year; ?></li>
+										<li style="color:#707070;"><?php echo $row->year; ?></li>
 									</ul>
 								</div>
 							<?php } ?>
 						</div>
-						<button class="section__nav section__nav--cards section__nav--prev" data-nav="#binge" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<button class="section__nav section__nav--cards section__nav--prev" data-nav="#subscriptions" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1.25 7.72559L16.25 7.72559" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 								<path d="M7.2998 1.70124L1.2498 7.72524L7.2998 13.7502" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 							</svg></button>
-						<button class="section__nav section__nav--cards section__nav--next" data-nav="#binge" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<button class="section__nav section__nav--cards section__nav--next" data-nav="#subscriptions" type="button"><svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15.75 7.72559L0.75 7.72559" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 								<path d="M9.7002 1.70124L15.7502 7.72524L9.7002 13.7502" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 							</svg></button>
@@ -508,13 +458,13 @@
 	</section>
 	<!-- end thriller -->
 	<!-- War -->
-	<section class="section" style="border-top: 1px solid rgba(47,128,237,0.1); border-bottom: 1px solid rgba(47,128,237,0.1);">
+	<section class="section">
 		<div class="container">
-			<div class="row">
+			<div class="row" style="padding-top: 50px;border-top: 1px solid rgba(47,128,237,0.1);">
 				<div class="col-12">
-					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px;"><a href="#"> War</a></h2>
+					<h2 class="section__title" style="border-left: 3px solid #408bea;padding-left:10px; font-size:30px; "><a href="#"> WAR</a></h2>
 				</div>
-				<div class="col-12">
+				<div class="col-12" >
 					<div class="section__carousel-wrap">
 						<div class="section__carousel owl-carousel" id="subscriptions">
 							<?php foreach ($war->result() as $row) { ?>
@@ -533,16 +483,8 @@
 											<path d="M22,9.67A1,1,0,0,0,21.14,9l-5.69-.83L12.9,3a1,1,0,0,0-1.8,0L8.55,8.16,2.86,9a1,1,0,0,0-.81.68,1,1,0,0,0,.25,1l4.13,4-1,5.68A1,1,0,0,0,6.9,21.44L12,18.77l5.1,2.67a.93.93,0,0,0,.46.12,1,1,0,0,0,.59-.19,1,1,0,0,0,.4-1l-1-5.68,4.13-4A1,1,0,0,0,22,9.67Zm-6.15,4a1,1,0,0,0-.29.88l.72,4.2-3.76-2a1.06,1.06,0,0,0-.94,0l-3.76,2,.72-4.2a1,1,0,0,0-.29-.88l-3-3,4.21-.61a1,1,0,0,0,.76-.55L12,5.7l1.88,3.82a1,1,0,0,0,.76.55l4.21.61Z" />
 										</svg> 8.3</span>
 									<h6 class="card__title"><a href="<?php echo base_url(); ?>/details/<?php echo $row->id; ?>"><?php echo ucwords($row->title); ?></a></h6>
-									<ul class="card__list card__list--subs">
-										<?php
-										$this->db->where('movie_id', $row->id);
-										$this->db->join('categories', 'categories.id = movie_categories.category_id', 'left');
-										$cat = $this->db->get('movie_categories')->result();
-										foreach ($cat as $val_cat) {
-											echo "<li>" . $val_cat->name . "</li>";
-										}
-										?>
-										<li><?php echo $row->year; ?></li>
+									<ul class="card__list card__list--subs">								
+										<li style="color:#707070;"><?php echo $row->year; ?></li>
 									</ul>
 								</div>
 							<?php } ?>
