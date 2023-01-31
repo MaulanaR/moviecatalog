@@ -32,10 +32,8 @@ class Beranda extends CI_Controller
 		$this->db->join('movie_categories', 'movie_categories.movie_id = movies.id', 'left');
 		$data_gambar['action_movies'] = $this->db->get('movies');
 		// Drama
-		$this->db->Select('movies.*');
-		$this->db->where('category_id', 25);
-		$this->db->join('movie_categories', 'movie_categories.movie_id = movies.id', 'left');
-		$data_gambar['drama'] = $this->db->get('movies');
+		$this->db->where('is_drama_korea', 1);
+		$data_gambar['drama_korea'] = $this->db->get('movies');
 		// War
 		$this->db->Select('movies.*');
 		$this->db->where('category_id', 15);
@@ -46,11 +44,9 @@ class Beranda extends CI_Controller
 		$this->db->where('category_id', 21);
 		$this->db->join('movie_categories', 'movie_categories.movie_id = movies.id', 'left');
 		$data_gambar['romance'] = $this->db->get('movies');
-		// Thriller
-		$this->db->Select('movies.*');
-		$this->db->where('category_id', 25);
-		$this->db->join('movie_categories', 'movie_categories.movie_id = movies.id', 'left');
-		$data_gambar['thriller'] = $this->db->get('movies');
+		//Film Indonesia
+		$this->db->where('is_indonesian', 1);
+		$data_gambar['film_indonesia'] = $this->db->get('movies');
 		//Featured
 		$this->db->where('is_featured', 1);
 		$data_gambar['featured1'] = $this->db->get('movies');
