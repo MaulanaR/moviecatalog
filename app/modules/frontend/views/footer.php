@@ -69,7 +69,7 @@
 							<a href="privacy.html">Privacy policy</a>
 							<a href="privacy.html">Terms and conditions</a>
 						</div>
-						<small class="footer__copyright">© PusatLensaFilm, 2023. Created by <a href="https://appx.alus.co/luqman_web" target="_blank">Luqman Aly Razak</a>.</small>
+						<small class="footer__copyright">©PUSATLENTSA21, 2023. Created by <a href="http://appx.alus.co/luqman_web" target="_blank">Luqman Aly Razak</a>.</small>
 					</div>
 				</div>
 			</div>

@@ -10,7 +10,7 @@
 					</button>
 
 					<a href="<?= site_url('/') ?>" class="header__logo">
-						<img src="<?= base_url('assets/img/logo.png') ?>" alt="">
+						<img src="<?= base_url('assets/img/logo-update2.png') ?>" alt="">
 					</a>
 
 					<ul class="header__nav" style="padding-left:300px; padding-left:200px; ">
@@ -49,7 +49,7 @@
 						</li>
 					</ul>
 
-					<!-- <div class="header__actions">
+					<div class="header__actions">
 						<form action="#" class="header__form">
 							<input class="header__form-input" type="text" placeholder="I'm looking for...">
 							<button class="header__form-btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@
 						</button>
 
 
-					</div> -->
+					</div>
 				</div>
 			</div>
 		</div>
