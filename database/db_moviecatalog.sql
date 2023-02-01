@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2023 at 02:40 PM
+-- Generation Time: Feb 01, 2023 at 03:31 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -211,7 +211,7 @@ CREATE TABLE `alus_u` (
 --
 
 INSERT INTO `alus_u` (`id`, `username`, `job_title`, `abc`, `ip_address`, `ghi`, `def`, `mno`, `jkl`, `stu`, `pqr`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`, `ht`, `picture`, `mdo_id`, `mos_id`, `grup_type`, `bpd_id`, `bpd_id_2`, `staff_pmk_id`) VALUES
-(64, 'admins', 'admins', 'MTIzNDU2Nzg5MDEyMzQ1Nvqvv5U+5Kixew57njDPeg==', '::1', '$2y$08$.sbsuXatbF/d4/RvUy77GeeX/Nw48XoXXS/3Xurj7O/ujoQu3KGzK', 'xEfWFClsAdO4BnNm', '', '', NULL, '', 1469523580, 1675153365, 1, 'User', '', '', '11', 0, '1496118042.jpg', NULL, NULL, NULL, NULL, NULL, NULL),
+(64, 'admins', 'admins', 'MTIzNDU2Nzg5MDEyMzQ1Nvqvv5U+5Kixew57njDPeg==', '::1', '$2y$08$.sbsuXatbF/d4/RvUy77GeeX/Nw48XoXXS/3Xurj7O/ujoQu3KGzK', 'xEfWFClsAdO4BnNm', '', '', NULL, '', 1469523580, 1675213908, 1, 'User', '', '', '11', 0, '1496118042.jpg', NULL, NULL, NULL, NULL, NULL, NULL),
 (65, 'BAGIAN PERLENGKAPAN', 'BAGIAN PERLENGKAPAN', 'MTIzNDU2Nzg5MDEyMzQ1NsGuoJM/yqy8eAN68DTNdlID3W0pjA==', '::1', '$2y$08$JoKZ4fv6BkH5WTWLwW9IfulZAbwPRhawSu5/basXlOukNzemXJuqS', 'Ih49EoG2nF0Zt38O', NULL, NULL, NULL, NULL, 1542868077, 1550670091, 1, 'BAGIAN PERLENGKAPAN', NULL, NULL, '0', 0, 'avatar_default.png', NULL, 1, NULL, NULL, NULL, NULL),
 (66, 'DINAS PENDIDIKAN', 'DINAS PENDIDIKAN', 'MTIzNDU2Nzg5MDEyMzQ1Nv2quZ4/3a+0fSdy3TLJexUMnGM=', '::1', '$2y$08$VUKn/N/Oz3h/8IB7somj3ODzqJ3cGYVnLbUw/QESB9MVhCV.zeInG', 'Qoc9aAIiYkGjg9IZ', NULL, NULL, NULL, NULL, 1542868087, 1550991198, 1, 'DINAS PENDIDIKAN', '', NULL, '0', 0, 'avatar_default.png', NULL, 2, NULL, NULL, NULL, NULL),
 (67, 'KECAMATAN KAYAN HULU', 'KECAMATAN KAYAN HULU', 'MTIzNDU2Nzg5MDEyMzQ1Nva5/Iwiy6i5IlBV1z7BfldBkGEr', '::1', '$2y$08$amSFXmE4w705SSYY562IM.wr5fvtERPp7sXIFyi04MgZVY2rEhMXS', 'rrptJbn3YVDGJGOF', NULL, NULL, NULL, NULL, 1542868107, 1549440969, 1, 'KECAMATAN KAYAN HULU', NULL, NULL, '0', 0, 'avatar_default.png', NULL, 3, NULL, NULL, NULL, NULL),
@@ -411,7 +411,9 @@ INSERT INTO `movies` (`id`, `title`, `rating`, `year`, `duration`, `age`, `descr
 (18, 'The Old Way (2023)', 8.6, 2023, '95 Min', 18, 'An old gunslinger and his daughter must face the consequences of his past, when the son of a man he murdered years ago arrives to take his revenge.', '167515286337.mp4', '167515286337.jpg', '', NULL, '2023-01-31 08:14:24', NULL, 1, 0, 0),
 (19, 'Hidayah', 8.3, 2023, '92 Min', 13, 'Di tengah imannya yang tengah goyah, BAHRI (Ajil Ditto), seorang ustadz muda, berusaha mengubur masa lalunya dengan bekerja di kota. Hingga suatu ketika, sahabat Bahri, HASAN, datang dari kampung untuk meminta tolong. Desa Mekarwangi tempat Bahri tumbuh dan berasal, mengalami gangguan gaib yang mengusik kedamaian kampung, yang dipercaya disebabkan oleh RATNA (Givina), teman lama Bahri. Ratna sakit keras dan menderita, namun tak kunjung menemui ajal. Teriakan kesakitan Ratna menghantui kampung tiap malam, disertai kemunculan sosok gaib yang mengganggu warga. Bahri kembali ke Desa Mekarwangi, dan mendapati bahwa bahaya yang harus ia hadapi lebih besar dari yang ia duga. Bahkan sesudah Ratna wafat, gangguan gaib malah semakin parah, hingga merenggut nyawa warga kampung. Bahri dituding bertanggung jawab atas itu semua, dan masa lalu Bahri sebagai narapidana terbongkar, membuat warga Mekarwangi mengusirnya. Demi menyelamatkan diri dan kampungnya, Bahri tidak punya pilihan selain meraih kembali hidayah dan memperteguh imannya.', NULL, '167515577368.jpg', '', '2023-01-31 09:15:48', '2023-01-31 09:02:54', NULL, 4, 1, 0),
 (20, 'Transfusion (2023)', 8.9, 2023, '105 Min', 18, 'A former Special Forces operative thrust into the criminal underworld to keep his only son from being taken away from him.', '167516108225.mp4', '167516108225.jpg', '', '2023-01-31 11:06:51', '2023-01-31 10:31:22', NULL, 3, 0, 0),
-(21, 'Kokdu: Season of Deity (2023)', 9.5, 2023, '80 Min', 18, 'A fantasy medical drama about a high-ranking grim reaper named Kkok Du, who is the only being to exist in the underworld. Every 99 years, the cold and cruel Kkok Du must take a break from his job in the underworld and spend 49 days in the mortal realm—and this time, he winds up inhabiting the body of the human Do Jin Woo. While living as Do Jin Woo, he meets Han Gye Jeol, a female doctor who has the mysterious ability to order Kkok Du around.', NULL, '167516298056.jpg', '', '2023-01-31 11:07:20', '2023-01-31 11:03:01', NULL, 4, 0, 1);
+(21, 'Kokdu: Season of Deity (2023)', 9.5, 2023, '80 Min', 18, 'A fantasy medical drama about a high-ranking grim reaper named Kkok Du, who is the only being to exist in the underworld. Every 99 years, the cold and cruel Kkok Du must take a break from his job in the underworld and spend 49 days in the mortal realm—and this time, he winds up inhabiting the body of the human Do Jin Woo. While living as Do Jin Woo, he meets Han Gye Jeol, a female doctor who has the mysterious ability to order Kkok Du around.', NULL, '167516298056.jpg', '', '2023-01-31 11:07:20', '2023-01-31 11:03:01', NULL, 4, 0, 1),
+(22, 'The Bait (2023)', 7.7, 2023, '80 Min', 18, 'A story that digs into the truth of past unsolved cases through the heinous current events. It is predicting the birth of a more realistic and new crime thriller based on a rare event.', '167521482854.mp4', '167521513702.jpg', '', '2023-02-01 01:32:17', '2023-02-01 01:27:08', NULL, 0, 0, 1),
+(23, 'The Bride of Habaek (2017)', 1, 2017, '80 Min', 18, 'Yoon So Ah is a pragmatic neuropsychiatrist who carries a tremendous financial burden to run her own practice. Her family has been tasked with serving Ha Baek, a reincarnated water god, for many generations, and So Ah is forced to do the same. Ha Baek starts to develop feelings for So Ah, but he has competition for her heart from Hoo Ye, the CEO of a resort company, who clashes with So Ah over a piece of land but then falls in love with her. Can a relationship between a mortal female and a god have a future?', NULL, '167521509950.jpg', '', '2023-02-01 01:37:28', '2023-02-01 01:31:39', NULL, 3, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -463,8 +465,12 @@ INSERT INTO `movie_categories` (`id`, `movie_id`, `category_id`) VALUES
 (82, 17, 25),
 (83, 20, 7),
 (84, 20, 25),
-(85, 21, 25),
-(86, 21, 29);
+(101, 23, 6),
+(102, 23, 29),
+(103, 23, 31),
+(104, 22, 7),
+(105, 22, 29),
+(106, 21, 29);
 
 -- --------------------------------------------------------
 
@@ -674,13 +680,13 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `movie_categories`
 --
 ALTER TABLE `movie_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT for table `reviews`
