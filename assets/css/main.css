@@ -873,22 +873,22 @@ body::-webkit-scrollbar-thumb {
 }
 @media (min-width: 250px) {
   .home__card {
-    width: 250px;
+    width: 220px;
   }
 }
 @media (min-width: 360px) {
   .home__card {
-    width: 320px;
+    width: 280px;
   }
 }
 @media (min-width: 400px) {
   .home__card {
-    width: 340px;
+    width: 280px;
   }
 }
 @media (min-width: 576px) {
   .home__card {
-    width: 360px;
+    width: 350px;
   }
   .home__card div {
     padding: 30px;
@@ -930,7 +930,7 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 40px;
   }
   .home__card {
-    width: 450px;
+    width: 300px;
   }
 }
 @media (min-width: 992px) {
